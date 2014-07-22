@@ -21,7 +21,7 @@ Ultimate Profile Builder by CMSHelpLive uses responsive layout and can snug insi
 
 Ultimate Profile Builder by CMSHelpLive uses shortcodes to create different pages, which means it only takes few minutes to set up and integrate with your current site.
 
-> We do not provide support for the Ultimate Profile Builder on the WordPress.org forums. Extended 24 Hours Helpdesk Ticketing support is available for subscribers of[Ultimate Profile Builder Pro By CMSHelpLive](http://www.cmshelplive.com/chl-products/ultimate-profile-builder-pro.html).
+> We do not provide support for the Ultimate Profile Builder on the WordPress.org forums. Extended 24 Hours Helpdesk Ticketing support is available for subscribers of [Ultimate Profile Builder Pro By CMSHelpLive](http://www.cmshelplive.com/chl-products/ultimate-profile-builder-pro.html).
 > Pro version comes with extra features such as custom groups, preinstalled themes and more!
 
 = Pro version =
