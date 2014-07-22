@@ -41,9 +41,9 @@ Ultimate Profile Builder by CMSHelpLive uses shortcodes to create different page
 
 1. Download Ulitmate Profile Builder by CMSHelpLive plugin
 
-2. Go to your Dashboard and locate “Plugins” tab. Click on “Upload Plugin” and specify the path of downloaded plugin in the text box.
+2. Go to your Dashboard and locate Plugins tab. Click on Upload Plugin and specify the path of downloaded plugin in the text box.
 
-3. Click on “Activate Plugin”
+3. Click on Activate Plugin
 
 4. UPB shortcodes will become available for use via content box of the site pages.
 
@@ -63,7 +63,7 @@ Yes, a custom field can be assigned to more than single user role in field creat
 == Screenshots ==
 
 1. Shortcodes with general instructions
-2. Add new user roles using "Add User Role" menu link.
+2. Add new user roles using Add User Role menu link.
 3. Chose a role to add custom fields
 4. Select a field type to add.
 
