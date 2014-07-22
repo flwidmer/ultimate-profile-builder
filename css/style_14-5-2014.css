@@ -1,0 +1,332 @@
+html { font-size:100% !important;} 
+
+
+#upb-form { font-family:Georgia, "Times New Roman", Arial; color:#8a8a8a; float:left; width:100%;}
+
+
+
+/*---------------main page color----------------*/
+#main-upb-form { background-color: #F9F9F9;
+float: left;
+width:100%;
+padding: 26px 0px 26px 0px; border-top: 8px solid #000;}		
+
+/*---------------main page color end----------------*/
+
+
+.UltimatePB-Button-area { background-color: #F9F9F9;
+float: left;
+width: 100%;
+padding: 26px 0px 26px 0px; margin-top: 13px;text-align: center;}
+
+#main-upb-form .box-view-main { padding:26px;padding-top: 0px;}
+
+#main-upb-form .main-edit-profile {padding: 26px;}
+
+.margin-left2 {width: 45%;}
+
+.margin-left3 {
+width: 66%;
+margin: 0px auto;
+}
+
+.toggleDiv img {box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2) !important;}
+
+.updated-successfully-upb-device .margin-left2  {width: 57%;margin: 0px auto;}
+.updated-successfully-upb-device { text-align:center}
+.profile-updated-succ {text-align:left; float:left; width:100%;} 
+
+
+.formtable { width:100%; float:left;padding-bottom: 10px}
+
+.formtable .lable-text { width: 40%;
+float: left;padding-right: 25px; text-align:right;}
+
+.formtable .input-box {width: 54%;
+float: left;}
+
+.formtable .input-box input { background-color:#fff; border:1px solid #ebebeb;border-radius: 5px;width: 65%; color:#8a8a8a; font-size:11px; font-style:italic; float:left;}
+
+.formtable .input-box input[type="checkbox"] { width:50px;margin-top: 9px;}
+
+
+#password_info { background-color:#ffe5e5;border:1px solid #fadbdb;border-radius: 5px; color:#fea7a7; font-size:11px;padding: 3px;
+margin-top: 6px; float:left;width: 80%;}
+
+.reg_frontErr {background-color:#ffe5e5;border:1px solid #fadbdb;border-radius: 5px; color:#fea7a7; font-size:11px;padding: 3px;
+margin-top: 6px; float:left;width: 80%;}
+
+.formtable .input-box #complexity {float: left;
+width: 27%;margin-left: -4px;
+}
+
+
+
+.default {
+
+	background-color:#fea7a7;
+
+}
+
+.weak {
+
+	background-color: #ffe5e5;
+
+	border: 1px solid #fadbdb!important;
+
+	font-family:Georgia, "Times New Roman", Times, serif;
+
+	font-size:14px !important;
+
+	color:#fea7a7 !important;
+
+	line-height: 24px;border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;padding-left: 5px;
+
+}
+
+.strong {
+
+	background-color: #ffffd8;
+
+	border: 1px solid #f2e5c8!important;
+
+	font-family:Georgia, "Times New Roman", Times, serif;
+
+	font-size:14px;
+
+	color:#ffd863 !important;border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;padding-left: 5px;
+
+}
+
+.stronger {
+
+	background-color: #e6ffe5;
+
+	border: 1px solid #e6efdc!important;
+
+	font-family:Georgia, "Times New Roman", Times, serif;
+
+	font-size:14px;
+
+	color:#9ae197 !important;border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;padding-left: 5px;
+
+}
+
+.strongest {
+
+	background-color: #ffffd8;
+
+	border: 1px solid #f2e5c8 !important;border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;padding-left: 5px;
+
+}
+
+.formtable .input-box .reg_frontErr {background-color: #FFE5E5;
+border: 1px solid #FADBDB;
+border-radius: 5px;
+color: #FEA7A7;
+font-size: 11px;
+padding: 3px;
+margin-top: 6px;
+float: left;
+width: 80%;}
+
+.upb-check-text { float:left;}
+
+
+.viewselector .listview {
+float: left;
+background-image: url(../images/viewicon.gif);
+width: 40px;
+height: 39px;
+}
+
+.viewselector .gridview {float: left;
+background-image: url(../images/viewicon.gif);
+width: 40px;
+height: 39px; background-position:right;}
+
+
+.top-part .profile-user-name {float: left;}
+
+.top-part .member_search {float: right;}
+
+.viewselector { float:left;}
+
+.box-view-main .listview_header { width:100%; float:left;}
+
+.box-view-main .listview_header div{ float:left; width:25%;}
+.box-view-main .listview_header div:last-child { text-align:center;}
+
+.box-view-main .list-box {width: 96%;
+float: left;background-color: #FFF;
+border-top: 1px solid #EBEBEB;
+border-left: 1px solid #EBEBEB;
+border-right: 1px solid #EBEBEB;padding: 13px;
+}
+
+.box-view-main .list-box div {float:left; width:25%;}
+.box-view-main .list-box div:last-child { text-align:center;} 
+
+.box-view-main .box-view .box-view-img img { height:100%;}
+
+.box-view-main .box-view {float: left;
+background-color: #FFF;
+padding: 20px;margin-bottom: 20px;border: 1px solid #EFEFEF;
+}
+.box-view-name{ float:left; width:100%; min-height:48px;}
+.box-view .profile-dec{ float:left; width:100%; min-height:105px;font-size: 12px;
+padding-top: 9px;
+text-align: left;}
+
+.box-view .box-view-name a { text-decoration:none;}
+
+.box-view .box-view-post-num a {text-decoration:none;}
+
+
+.clear_seprator{width: 100%;
+float: left;
+height: 10px;
+}
+
+.UltimatePB-forgot-pass { text-align:center;width: 100%;
+text-align: center;
+float: left;
+padding-top: 7px;}
+
+#main-upb-form .main-edit-profile .left-img-part { width:50%; float:left;}
+
+#main-upb-form .main-edit-profile .left-img-part div {
+float: left;
+background-color: #FFF;
+padding: 14px;}
+
+.profile-about-me { width:100%; float:left;margin-top: 18px;}
+
+#main-upb-form .main-edit-profile .right-profile-info {width:50%; float:left; text-align:right;}
+
+#main-upb-form .main-edit-profile .right-profile-info div { font-style:italic;}
+.view-container{ float:left; width	:	100%;}
+
+.UltimatePB-Button-inp {width: 20%;
+margin: 0px auto;}
+
+.login-info { width:100%; text-align:center;}
+
+.formtable .input-box .radio_option { float:left;}
+
+.formtable .input-box input[type="radio"] {margin-top: 9px;
+float: left;
+}
+
+
+#main-upb-form .my-post {padding: 26px;}
+
+#upb-form .custom_fields { width:100%; margin-top:10px; float:left; background-color:#f2f7fc;border: 1px solid #DAEDFF;} 
+#upb-form .custom_fields .user-custom_field {float: left;
+width: 95.5%;
+padding: 15px;border-bottom: 1px solid #daedff;padding-bottom: 6px;
+padding-top: 6px;font-weight: bold;
+color: #010101;}
+
+#upb-form .custom_fields .user-custom_field .field_label { float:left;padding-right: 18px;text-transform: capitalize;width: 34%;}
+
+#upb-form .custom_fields .user-custom_field .field_value {float: left;
+padding-right: 11px;text-transform: capitalize;}
+
+#upb-form .custom_fields .user-custom_field:last-child { border-bottom: 4px solid #DAEDFF;}
+
+#upb-form .custom_fields .user-custom_field .field_value .field_mulitple_value { float:left;margin-right: 12px;}
+
+#upb-form .custom_fields .user-custom_field .field_value .field_mulitple_value {position: relative;
+margin: 3px 0 3px 5px;
+padding: 8px 15px 8px 14px;
+border: 0px solid #AAA;
+border-radius: 3px;
+background-color: #e1eefb;
+border: 1px solid #C8E1FA;
+color: #9BC2E9;
+line-height: 13px;
+cursor: default;font-weight: normal;}
+
+.top-part{ float:left; width:100%;margin-bottom: 10px;}
+.top-part  a{ float:right;}
+
+.top-part .profile-user-name {font-size: 30px;
+color: #000;}
+
+
+
+/*-----------------------------------Responsive css Start-----------------------------------*/
+@media screen and (max-width: 640px) {
+	
+	#main-upb-form {
+background-color: #F9F9F9;
+float: left;
+width: 100%;
+padding: 0px;
+border-top: 8px solid #000;
+}
+
+	#main-upb-form .allready-regis-device {float: left;
+width: 100%;
+margin-bottom: 10px;
+text-align: center;
+}
+
+
+.formtable .lable-text {
+width: 100%;
+text-align: center;
+}
+
+.formtable .input-box {
+width: 100%; text-align:center
+}
+
+.formtable .input-box input {float: none;
+margin: 0px auto;}
+
+#password_info {float: none;
+width: 77%;
+margin: 10px auto;
+text-align: center;
+margin-bottom: 0px;}
+
+.formtable .input-box input[type="checkbox"] {
+width: 3px;
+margin-top: 9px;
+float: left;
+}
+
+.formtable .input-box { text-align:center;}
+
+}
+
+@media screen and (max-width: 480px) {
+	
+.top-part .profile-user-name {
+width: 100%;
+float: left;
+text-align: center;
+}
+
+#upb-form .top-part a {width: 100%;
+text-align: center;}
+
+#upb-form .top-part a .UltimatePB-Button  { float:none; margin:0px;}
+	
+}
+
+
+/*-----------------------------------Responsive css End-----------------------------------*/
+
+
+/*-----------------------------------Removeble css css start-----------------------------------*/
+
+.site-content article {border-bottom: 0px double #EDEDED !important;}
+
+/*-----------------------------------Removeble css css End-----------------------------------*/
