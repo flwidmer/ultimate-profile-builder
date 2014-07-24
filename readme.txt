@@ -57,7 +57,7 @@ All user activity takes place on the front end, and logging in and editing does 
 * **[UPB_profile_list]** - to view a list of all users on the site OR **[UPB_profile_list role="Subscriber"]** for showing user list for a specific role or a group of users. Replace "Subscriber" with group name.
 
 
-> We do not provide support for the Ultimate Profile Builder on the WordPress.org forums. Extended 24 Hours Helpdesk Ticketing support is available for subscribers of[Ultimate Profile Builder Pro By CMSHelpLive](http://www.cmshelplive.com/chl-products/ultimate-profile-builder-pro.html).
+> We do not provide support for the Ultimate Profile Builder on the WordPress.org forums. Extended 24 Hours Helpdesk Ticketing support is available for subscribers of [Ultimate Profile Builder Pro By CMSHelpLive](http://www.cmshelplive.com/chl-products/ultimate-profile-builder-pro.html).
 > Pro version comes with extra features such as privacy settings, preinstalled themes and more!
 
 = Pro version =
@@ -85,7 +85,7 @@ All user activity takes place on the front end, and logging in and editing does 
 
 4. UPB shortcodes will become available for use via content box of the site pages.
 
-Also, there will be “UPB” tab available on Dashboard to manage various settings.
+Also, there will be **Ultimate Profile Builder** tab available on Dashboard to manage various settings.
 
 == Frequently Asked Questions ==
 
