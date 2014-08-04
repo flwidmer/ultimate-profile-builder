@@ -1,7 +1,6 @@
 <?php
 
 $path =  plugin_dir_url(__FILE__);  
-
 $upb_option=$wpdb->prefix."upb_option";
 
 $front_theme = $wpdb->get_var("select value from $upb_option where fieldname='upb_theme'");

@@ -3,7 +3,7 @@
 		Plugin Name: Ultimate Profile Builder by CMSHelpLive
 		Plugin URI: http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html
 		Description: Login, registration, edit profile, and password recover shortcodes for the front-end and a complete profile structure.
-		Version: 1.0
+		Version: 1.1
 		Author: Vincent Andrew
 		Author URI: http://cmshelplive.com/
 		License: GPL2

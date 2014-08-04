@@ -1,5 +1,4 @@
 <script>
-
 var view = window.location.hash;
 
 //alert(view);

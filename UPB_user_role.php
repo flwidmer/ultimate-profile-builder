@@ -1,4 +1,5 @@
 <?php 
+
 global $wpdb;
 $path =  plugin_dir_url(__FILE__); 
 if($_POST['role_submit'])

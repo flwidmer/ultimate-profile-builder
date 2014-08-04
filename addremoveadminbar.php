@@ -1,4 +1,5 @@
 <?php
+
 	global $wpdb;
 	global $current_user;	
 	$upb_option=$wpdb->prefix."upb_option";

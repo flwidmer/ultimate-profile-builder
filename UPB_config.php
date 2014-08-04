@@ -1,4 +1,5 @@
 <?php
+
 global $wpdb;
 $upb_cat=$wpdb->prefix."upb_cat";
 $upb_option=$wpdb->prefix."upb_option";

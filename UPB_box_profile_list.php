@@ -1,4 +1,5 @@
 <?php
+
 $path =  plugin_dir_url(__FILE__);   // define path to link and scripts
 
 $item_per_page = $wpdb->get_var("select value from $upb_option where fieldname='upb_profile_max_resutls'");

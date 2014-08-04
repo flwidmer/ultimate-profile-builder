@@ -1,4 +1,5 @@
-<?php
+﻿<?php
+
 	$path =  plugin_dir_url(__FILE__); 
 	include_once "upboptioncode.php";
 ?>

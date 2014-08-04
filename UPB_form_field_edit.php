@@ -3,6 +3,7 @@ global $wpdb;
 $upb_fields =$wpdb->prefix."upb_fields";
 $path =  plugin_dir_url(__FILE__); 
 ?>
+
 <style>
 .form_field p{ display:none;}
 #selectfieldtype{ display:block;}

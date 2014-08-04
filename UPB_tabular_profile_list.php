@@ -1,7 +1,5 @@
 <?php 
 
-
-
 	$path =  plugin_dir_url(__FILE__);  // define path to link and scripts
 
 

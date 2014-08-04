@@ -5,7 +5,7 @@ Tags: admin, community, profile, registration, shortcode, membership, registrati
 
 Requires at least: 3.5
 Tested up to: 3.9
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -107,12 +107,18 @@ Yes, a custom field can be assigned to more than single user role in field creat
 
 == Changelog ==
 
+= 1.1 =
+* Bug Fixes
+
 = 1.0 =
 * First Release
 * Added Custom roles
 * Added Custom Fields
 
 == Upgrade Notice ==
+
+= 1.1 =
+* Bug Fixes
 
 = 1.0 =
 Initial Release
