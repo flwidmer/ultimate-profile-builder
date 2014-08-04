@@ -1,7 +1,7 @@
 <?php
 	/*
 		Plugin Name: Ultimate Profile Builder by CMSHelpLive
-		Plugin URI: http://cmshelplive.com/
+		Plugin URI: http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html
 		Description: Login, registration, edit profile, and password recover shortcodes for the front-end and a complete profile structure.
 		Version: 1.0
 		Author: Vincent Andrew
@@ -134,10 +134,11 @@ function theme_name_scripts() {
 	wp_enqueue_style( 'upb.css', plugin_dir_url(__FILE__) . 'css/upb.css');
 	wp_enqueue_script( 'scriptaculous' );
 	wp_enqueue_script( 'password-strength-meter' );
-	wp_enqueue_script( 'mocha.js',  plugin_dir_url(__FILE__) . 'js/mocha.js');
 	wp_enqueue_script( 'prism.js',  plugin_dir_url(__FILE__) . 'docsupport/prism.js' );
 	
 }
+
+
 
 function admin_theme_name_scripts() {
 	wp_enqueue_style( 'style.css', plugin_dir_url(__FILE__) . 'css/style.css');
@@ -157,15 +158,15 @@ function admin_theme_name_scripts() {
 	
 	function ultimate_profile_builder_menu()
 	{
-		add_menu_page("Ultimate Profile Builder","Ultimate Profile Builder",10,"UltimatePB_settings","UltimatePB_settings",plugins_url('/images/profile-icon2.png', __FILE__));
+		add_menu_page("Ultimate Profile Builder","Ultimate Profile Builder","manage_options","UltimatePB_settings","UltimatePB_settings",plugins_url('/images/profile-icon2.png', __FILE__));
 
-		add_submenu_page("UltimatePB_settings","Add User Role","Add User Role",8,"UltimatePB_Custom_User_Role","UltimatePB_Custom_User_Role");
+		add_submenu_page("UltimatePB_settings","Add User Role","Add User Role","manage_options","UltimatePB_Custom_User_Role","UltimatePB_Custom_User_Role");
 
-		add_submenu_page("UltimatePB_settings","Manage Custom Fields","Manage Custom Fields",8,"UltimatePB_Fields","UltimatePB_Fields");
+		add_submenu_page("UltimatePB_settings","Manage Custom Fields","Manage Custom Fields","manage_options","UltimatePB_Fields","UltimatePB_Fields");
 
-		add_submenu_page("","New Field","New Field",10,"UltimatePB_Field","UltimatePB_Field");
+		add_submenu_page("","New Field","New Field","manage_options","UltimatePB_Field","UltimatePB_Field");
 
-		add_submenu_page("","Edit Field","Edit Field",10,"UltimatePB_Field_edit","UltimatePB_Field_edit");
+		add_submenu_page("","Edit Field","Edit Field","manage_options","UltimatePB_Field_edit","UltimatePB_Field_edit");
 	}
 
 	function UltimatePB_settings()
@@ -220,6 +221,8 @@ function admin_theme_name_scripts() {
 	add_shortcode( 'UPB_forgot_password', 'UPB_recover_password_fun' );
 	function UPB_register_fun( $content )
 	{
+		
+		wp_enqueue_script( 'mocha.js',  plugin_dir_url(__FILE__) . 'js/mocha.js');
 		include 'UPB_config.php';
 		include 'UPB_register_file.php';
 		//return $content;

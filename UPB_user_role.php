@@ -49,14 +49,8 @@ $roles = get_editable_roles();
 
 
 
-        <div class="pres-s-heading">
-
-
-
-        	Welcome to Ultimate Profile Builder! 
-
-
-
+        <div class="pres-s-heading" style="margin-top:15px;">
+        <a href="http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html" ><img src="<?php echo $path; ?>images/pro-banner-ubp.jpg" /></a>
 		</div>
 
 

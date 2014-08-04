@@ -22,7 +22,9 @@ $upb_fields =$wpdb->prefix."upb_fields";
 
         <div class="pres-s-left-icon"> <img src="<?php echo $path; ?>images/upb-logo.jpg"/> </div>
 
-        <div class="pres-s-heading"> Welcome to Ultimate Profile Builder! </div>
+       <div class="pres-s-heading" style="margin-top:15px;">
+        <a href="http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html" ><img src="<?php echo $path; ?>images/pro-banner-ubp.jpg" /></a>
+		</div>
 
 		<br>
 

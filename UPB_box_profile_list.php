@@ -1,57 +1,28 @@
 <?php
-
 $path =  plugin_dir_url(__FILE__);   // define path to link and scripts
 
+$item_per_page = $wpdb->get_var("select value from $upb_option where fieldname='upb_profile_max_resutls'");
+
+$profile_view = $wpdb->get_var("select value from $upb_option where fieldname='upb_profile_list_view'");
+
+	if(isset($content['role']))
 	$role = $content['role'];
 
 	$pageURL = get_permalink();
 
-
-
 	$sign = strpos($pageURL,'?')?'&':'?';
-
-
-
-
-
-
-
+	
+	if(isset($_REQUEST['id']))
 	$id = $_REQUEST['id'];
 
-
-
-
-
-
-
-	if($id)
-
-
-
+	if(isset($id))
 	{
-
-
-
 		include 'UPB_thirdpartyprofile.php';
-
-
-
 	}
-
-
-
 	else
-
-
-
 	{
-
-
-
-
 
 //$get_total_rows = $wpdb->get_var("SELECT COUNT(ID) FROM $wpdb->users");
-
 if(!empty($_REQUEST['search']))
 {
 
@@ -127,11 +98,9 @@ $get_total_rows = $my_users->total_users;
 
 
 
-$item_per_page = $wpdb->get_var("select value from $upb_option where fieldname='upb_profile_max_resutls'");
 
-$profile_view = $wpdb->get_var("select value from $upb_option where fieldname='upb_profile_list_view'");
 
-//echo $profile_view;die;
+//print_r( $my_users);die;
 
 //break total records into pages
 
@@ -165,8 +134,8 @@ if($pages > 1)
 
 ?>
 
-<script type="text/javascript">
 
+<script type="text/javascript">
 <?php 
 
 if($profile_view=='box')
@@ -194,8 +163,6 @@ else
 }
 
 ?>
-
-  
 
 jQuery(document).ready(function() {
 
@@ -340,7 +307,7 @@ jQuery(document).ready(function() {
 
                 </div>
 
-				<?php echo $pagination; ?>
+				<?php if(isset($pagination)) echo $pagination; ?>
 
 <!-----------------------List Box End-------------------------->
 

@@ -159,8 +159,8 @@ if($_POST['id'])
     	<div class="pres-s-left-icon">
         	<img src="<?php echo $path; ?>images/upb-logo.jpg"/>
 		</div>
-        <div class="pres-s-heading">
-        	Welcome to Profile Builder!
+        <div class="pres-s-heading" style="margin-top:15px;">
+        <a href="http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html" ><img src="<?php echo $path; ?>images/pro-banner-ubp.jpg" /></a>
 		</div>
 	</div>
 </div>
@@ -281,7 +281,7 @@ getfields("<?php echo $str;?>");
   	 //get the string typed by user
 	 name = jQuery("#field_name").val();
 
-   $.post('<?php echo get_option('siteurl').'/wp-admin/admin-ajax.php';?>?action=check_fieldname&cookie=encodeURIComponent(document.cookie)', {'name':name,'prevalue':'<?php echo $row->Name;?>'}, function(data) { 
+   jQuery.post('<?php echo get_option('siteurl').'/wp-admin/admin-ajax.php';?>?action=check_fieldname&cookie=encodeURIComponent(document.cookie)', {'name':name,'prevalue':'<?php echo $row->Name;?>'}, function(data) { 
 
    //make ajax call to check_username.php
 

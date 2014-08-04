@@ -1,5 +1,4 @@
-
-$ = jQuery;
+$ = jQuery.noConflict();
 $(function() 
 
 {

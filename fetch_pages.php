@@ -149,29 +149,6 @@ if(!empty($_REQUEST['search']))
 {
 
 $search = ( isset($_REQUEST['search']) ) ? sanitize_text_field($_REQUEST['search']) : false ;
-
-
-
-			/*$my_users = new WP_User_Query( 
-
-			array( 
-
-				'offset' => $position ,
-
-				'number' => $item_per_page,
-
-				'meta_key' => 'first_name',
-
-				'meta_value' => $search,
-
-				'meta_compare' => 'LIKE'
-
-				
-
-			));*/
-
-			
-
 			
 
 			$args = array(
@@ -241,12 +218,6 @@ $blogusers = $my_users->get_results();
 
 
 $get_total_rows = $my_users->total_users;
-
-//$blogusers = get_users('&offset='.$position.'&number='.$item_per_page.'&search='.$search); 
-
-
-
-
 
 				$query = "select value from $upb_option where fieldname='upb_profile_list_column'";
 

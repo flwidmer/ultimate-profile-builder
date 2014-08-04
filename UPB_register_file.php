@@ -162,7 +162,7 @@ if(!empty($reg1))
 {
  foreach($reg1 as $row1)
  {
-	$Customfield = str_replace(" ","_",$row->Name);
+	$Customfield = str_replace(" ","_",$row1->Name);
 	//echo $Customfield;die;
 	add_user_meta( $user_id, $Customfield, $_POST[$Customfield], true );	
 	update_user_meta( $user_id, $Customfield, $_POST[$Customfield], $prev_value );
@@ -170,7 +170,15 @@ if(!empty($reg1))
 
 }
 if($content['role']!="")
-{		 
+{   
+	if($content['role']=='Subscriber' || $content['role']=='Administrator' || $content['role']=='Editor' || $content['role']=='Author' || $content['role']=='Contributor')
+	{
+	$role = strtolower($content['role']);
+	}
+	else
+	{
+	$role = $content['role'];	
+	}
 	$user_id = wp_update_user( array( 'ID' => $user_id, 'role' => $content['role'] ) );
 }
 wp_mail( $user_email, $subject, $message );
