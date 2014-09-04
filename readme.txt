@@ -13,7 +13,7 @@ Now you can create custom profiles on your WordPress site with custom profile fi
 
 == Description ==
 
-Ultimate Profile Builder by CMSHelpLive lets you create and manage profiles on your WordPress site! You can define custom user roles like Authors, Actors, Tennis Players or anything you want. It will also allow vistors to register on the site, fill out custom fields specific to user roles and upload profile images. Their profiles can be edited by the users anytime by logging into the profile area of the site. You can display member profiles as list or box view. The profile view will show image thumbnail, profile snippets and user posts contribution.
+ Ultimate Profile Builder by CMSHelpLive lets you create and manage profiles on your WordPress site! You can define custom user roles like Authors, Actors, Tennis Players or anything you want. It will also allow vistors to register on the site, fill out custom fields specific to user roles and upload profile images. Their profiles can be edited by the users anytime by logging into the profile area of the site. You can display member profiles as list or box view. The profile view will show image thumbnail, profile snippets and user posts contribution.
 
 All user activity takes place on the front end, and logging in and editing does not requires users to go into the dashboard area. This is especially important if you want your users to have a consistent experience across the website.
 
