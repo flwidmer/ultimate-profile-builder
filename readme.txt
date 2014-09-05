@@ -4,8 +4,8 @@ Donate link: http://cmshelplive.com/
 Tags: admin, community, profile, registration, shortcode, membership, registration, user profile, user registration, custom field registration, customize profile, user fields, extra user fields, user group, groups, group fields, builder, profile builder, custom user profile, user profile page, edit profile, custom registration, custom registration form, custom registration page, registration page, user custom fields, user listing, front-end user listing, user login, user registration form, front-end login, front-end register, front-end registration, front-end edit profile, front-end user registration, user email, avatar upload, user avatar, profile image, registration form theme
 
 Requires at least: 3.5
-Tested up to: 3.9
-Stable tag: 1.1
+Tested up to: 4.1
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,15 +13,19 @@ Now you can create custom profiles on your WordPress site with custom profile fi
 
 == Description ==
 
- Ultimate Profile Builder by CMSHelpLive lets you create and manage profiles on your WordPress site! You can define custom user roles like Authors, Actors, Tennis Players or anything you want. It will also allow vistors to register on the site, fill out custom fields specific to user roles and upload profile images. Their profiles can be edited by the users anytime by logging into the profile area of the site. You can display member profiles as list or box view. The profile view will show image thumbnail, profile snippets and user posts contribution.
+> Totally revamped version 2. Now with a brand new GUI and additional custom field types! 
+
+Ultimate Profile Builder by CMSHelpLive lets you create and manage profiles on your WordPress site! You can define custom user roles like Authors, Actors, Tennis Players or anything you want. It will also allow vistors to register on the site, fill out custom fields specific to user roles and upload profile images. Their profiles can be edited by the users anytime by logging into the profile area of the site. You can display member profiles as list or box view. The profile view will show image thumbnail, profile snippets and user posts contribution.
 
 All user activity takes place on the front end, and logging in and editing does not requires users to go into the dashboard area. This is especially important if you want your users to have a consistent experience across the website.
 
 **Below are the major features of Ultimate Profile Builder**
 
+* Intuitive GUI
 * Create Custom Registration Page for registering new users on your website.
-* Custom fields include Text Box, Text Area, Radio Button, Checkbox and Selectbox.
+* Custom fields include Text Box, Text Area, Radio Button, Checkbox, Selectbox, Paragraph, Date, Email, Number and T&C Checkbox.
 * Default fields include - username, nickname, website, AIM, Yahoo, Jabber and About.
+* Create new Role or Field directly from "New" button on WordPress admin bar. 
 * Administrator can show/ hide any default field.
 * Administrator can define custom text over registration form.
 * Administrator can define label, order, length and description of custom fields.
@@ -64,10 +68,15 @@ All user activity takes place on the front end, and logging in and editing does 
 
 [Ultimate Profile Builder Pro](http://www.cmshelplive.com/chl-products/ultimate-profile-builder-pro.html) comes with these extra features:
 
-* Preinstalled 6 themes - Light+Green, Light+Pink, Light+Red, Light+Blue, Light+Modern Green, Light+Modern Yellow
-* Administrators can set a custom field as required
+* Preinstalled 18 themes - Default, Light Green, Light Pink, Light Red, Light Blue, Aqua, Baby Blue, Black, Blue, Blue green, Blue Violet, Brown, Crimson, Deep Pink, Forest Green, Fuchsia, Modern Green, Modern Yellow
+* Administrators can set a custom field as required field in registration form 
 * Administrators can show/ hide specific custom fields in registration form
 * Privacy Settings: Administrator can mark custom field visibility as Public, Registered and Private.
+* Shows Profile Completeness Bar on profile page
+* Additional filters for profile images. Currently offers grayscale filter.
+* Allows administrators to customize "Welcome Message" sent to users after successful registration.
+* Allows administrators to customize subject of email sent to users after successful registration.
+* Shows Data from bbPress (Topics, Replies, Favorites, Subscriptions), WP eCommerce, WooCommerce and Business Directory plugins.
 * Priority Helpdesk Support
 * Free updates for 1 year
 
@@ -103,10 +112,22 @@ Yes, a custom field can be assigned to more than single user role in field creat
 1. Options area.
 2. User Groups/Roles Manager.
 3. Adding a custom field to user Role.
-4. Select a field type to add.
-5. Custom fields manager.
+4. Custom fields manager.
+5. Admin bar visibility toggle
 
 == Changelog ==
+
+= 2.0 =
+* Totally revamped GUI.
+* Made compatible with WP 4.1
+* Added "User Role" and "User Field" in admin bar "New" drop down menu.
+* Added new custom field types.
+* Users can now totally remove profile image.
+* Profile image can be changed without going into "Edit" mode by hovering over the image.
+* Shows initials or nickname in avatar area if there is no profile image.
+* Code extensively commented.
+* Default pages are now automatically created with shortcodes.
+* Bug Fixes and stability improvements
 
 = 1.1 =
 * Bug Fixes

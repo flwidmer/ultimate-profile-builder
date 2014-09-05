@@ -3,14 +3,13 @@
 	global $wpdb;
 	global $current_user;	
 	$upb_option=$wpdb->prefix."upb_option";
+	/*This controls visibility for admin bar in the plugin settings*/
 	switch ($current_user->roles[0])
 	{
 		case "administrator":
 		{
 			$select="select * from $upb_option where fieldname='upb_adminshowhide'";
 			$data = $wpdb->get_results($select);
-			//$data=mysql_query($select);
-			//print_r($data);die;
 				if($data[0]->value=='no')
 				{
 					show_admin_bar( false );
@@ -19,9 +18,9 @@
 				{
 					show_admin_bar( true );					
 				}
-
 			break;
 		}
+		
 		case "author":
 		{
 			$select="select * from $upb_option where fieldname='upb_authorshowhide'";
@@ -36,6 +35,7 @@
 				}
 			break;
 		}
+		
 		case "editor":
 		{
 			$select="select * from $upb_option where fieldname='upb_editorshowhide'";
@@ -50,6 +50,7 @@
 				}
 			break;
 		}
+
 		case "contributor":
 		{
 			$select="select * from $upb_option where fieldname='upb_contributorshowhide'";
@@ -64,6 +65,7 @@
 				}
 			break;
 		}
+
 		case "subscriber":
 		{
 			$select="select * from $upb_option where fieldname='upb_subscribershowhide'";
@@ -79,5 +81,4 @@
 			break;	
 		}
 	}
-
 ?>

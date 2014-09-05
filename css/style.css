@@ -2,13 +2,12 @@ html {
 	font-size: 100% !important;
 }
 #upb-form {
-	font-family: Georgia, "Times New Roman", Arial;
-	color: #8a8a8a;
+	/*	font-family: Georgia, "Times New Roman", Arial;*/
+ color: #8a8a8a;
 	float: left;
 	width: 100%;
 }
 /*---------------main page color----------------*/
-
 #main-upb-form {
 	background-color: #F9F9F9;
 	float: left;
@@ -17,11 +16,6 @@ html {
 	border-top: 8px solid #000;
 }
 /*---------------main page color end----------------*/
-
-
-
-
-
 .UltimatePB-Button-area {
 	background-color: #F9F9F9;
 	float: left;
@@ -38,7 +32,7 @@ html {
 	padding: 26px;
 }
 .margin-left2 {
-	width: 45%;
+	width: 51%;
 }
 .Login-Success {
 	width: 68%;
@@ -51,12 +45,13 @@ html {
 	width: 66%;
 	margin: 0px auto;
 }
-
-.UPB-margin-left3 {width: 40%;
-margin: 0px auto;}
-
-#main-upb-form .UPB-margin-left3 a { text-align:center;}
-
+.UPB-margin-left3 {
+	width: 40%;
+	margin: 0px auto;
+}
+#main-upb-form .UPB-margin-left3 a {
+	text-align: center;
+}
 .toggleDiv img {
 	box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2) !important;
 }
@@ -98,7 +93,7 @@ margin: 0px auto;}
 	float: left;
 }
 .formtable .input-box input[type="checkbox"] {
-	width: 50px;
+	width: 29px;
 	margin-top: 9px;
 }
 #password_info {
@@ -124,11 +119,11 @@ margin: 0px auto;}
 	width: 80%;
 }
 .formtable .input-box #complexity {
-float: left;
-width: 27%;
-margin-left: -3px;
-height: 27px;
-margin-top: 2px;
+	float: left;
+	width: 27%;
+	margin-left: -3px;
+	height: 27px;
+	margin-top: 2px;
 }
 .default {
 	background-color: #fea7a7;
@@ -180,7 +175,8 @@ margin-top: 2px;
 	padding: 3px;
 	margin-top: 6px;
 	float: left;
-	width: 80%;margin: 0px auto;
+	width: 80%;
+	margin: 0px auto;
 }
 .upb-check-text {
 	float: left;
@@ -208,8 +204,8 @@ margin-top: 2px;
 	float: left;
 }
 .box-view-main .listview_header {
-	width: 100%;
-	float: left;
+ width: 97%  float: left;
+	padding-left: 15px;
 }
 .box-view-main .listview_header div {
 	float: left;
@@ -235,7 +231,7 @@ margin-top: 2px;
 	text-align: center;
 }
 .box-view-main .box-view .box-view-img img {
-	height: 100%;
+	height: 112px;
 }
 .box-view-main .box-view {
 	float: left;
@@ -247,7 +243,7 @@ margin-top: 2px;
 .box-view-name {
 	float: left;
 	width: 100%;
-	min-height: 48px;
+	min-height: 60px;
 }
 .box-view .profile-dec {
 	float: left;
@@ -314,7 +310,7 @@ margin-top: 2px;
 }
 .formtable .input-box input[type="radio"] {
 	margin-top: 9px;
-	float: left;
+	float: left;width: 29px!important;
 }
 #main-upb-form .my-post {
 	padding: 26px;
@@ -365,7 +361,8 @@ margin-top: 2px;
 	color: #9BC2E9;
 	line-height: 13px;
 	cursor: default;
-	font-weight: normal;
+	font-weight: normal;margin-left: 0px;
+margin-right: 8px;
 }
 .top-part {
 	float: left;
@@ -429,12 +426,16 @@ margin-top: 2px;
 .formtable .input-box {
 	text-align: center;
 }
-
-.formtable .input-box .reg_frontErr {margin: 0px auto;
-margin-top: 10px; float:none !important;}
-
-.formtable .input-box #complexity {margin: 0px auto;width: 32%; float:none !important;}
-
+.formtable .input-box .reg_frontErr {
+	margin: 0px auto;
+	margin-top: 10px;
+	float: none !important;
+}
+.formtable .input-box #complexity {
+	margin: 0px auto;
+	width: 32%;
+	float: none !important;
+}
 }
 
 @media screen and (max-width: 480px) {
@@ -444,7 +445,7 @@ margin-top: 10px; float:none !important;}
 	text-align: center;
 }
 #upb-form .top-part a {
-	width: auto;
+
 	text-align: center;
 	margin-right: 4px;
 }
@@ -467,31 +468,88 @@ margin-top: 10px; float:none !important;}
 	float: none !important;
 	margin: 6px auto;
 }
-
 .margin-left2 {
-width: 100%;
+	width: 100%;
 }
-
-
-.UPB-Search-Members { text-align:center;}
-
-#main-upb-form .all-log-device.margin-left2 a { float:none !important;}
-
-
+.UPB-Search-Members {
+	text-align: center;
+}
+#main-upb-form .all-log-device.margin-left2 a {
+	float: none !important;
+}
 #upb-form .edit-info .upb-name {
-
-width: 100%;text-align: center;
+	width: 100%;
+	text-align: center;
 }
-
 #upb-form .edit-info .upb-button {
+	width: 100%;
+	text-align: center;
+}
+#upb-form .top-part .profile-user-button {
+	width: 83%;
+	float: left;
+	text-align: center;
+}
 
-width: 100%;text-align: center;
+.default_profile_pic {width: 57% !important;height: 72px;line-height: 38px !important;font-size: 38px !important;height: 72px!important;}
+
+.UltimatePB-Button-inp input {margin-left: 0px !important; }
+
+.formtable .input-box input[type="checkbox"] {
+width: 32px !important;
+float: none !important;
+}
+
+#registerform .formtable .input-box input[type="checkbox"] {
+width: 42% !important;
+float: none !important;
+}
+
+.upb-check-text {
+float: left !important;
+width: 50% !important;
+text-align: center;
 }
 
 
-#upb-form .top-part .profile-user-button {width: 83%;
+
+.member_search #form1 input#search {width: 100%;}
+
+.upb-search-from-left{width: 59%;
 float: left;
-text-align: center;}
+margin-right: 18px;}
+
+
+.viewselector {
+float: left;
+width: 34%;margin-top: 25px;
+}
+
+#main-upb-form .main-edit-profile .left-img-part {
+width: 100% !important;
+float: left;
+}
+
+#progressbar {
+width: 100% !important;
+
+}
+
+#main-upb-form .main-edit-profile .left-img-part .default_profile_pic {width: 73% !important;
+height: 97px !important;
+font-size: 81px !important;
+padding-top: 72px;}
+
+#main-upb-form .main-edit-profile .right-profile-info {
+width: 100% !important;
+float: left;
+text-align: right;
+margin-top: 20px;
+}
+
+#upb-form .custom_fields .user-custom_field {width: 87% !important;}
+
+#upb-form .custom_fields .user-custom_field .field_label {width: 100% !important; padding-right:0px !important;}
 
 }
 
@@ -505,67 +563,130 @@ text-align: center;}
 #main-upb-form .log-need {
 	width: 100% !important;
 }
-.UPB-Search-Members { text-align:center;}
-
+.UPB-Search-Members {
+	text-align: center;
+}
 #main-upb-form .UPB-margin-left3 a {
-text-align: center;
-font-size: 11px;
+	text-align: center;
+	font-size: 11px;
 }
-#upb-form .top-part .profile-user-button a { width:100%; margin-bottom:5px;}
-
+#upb-form .top-part .profile-user-button a {
+	width: 100%;
+	margin-bottom: 5px;
+}
 #upb-form .top-part .profile-user-button {
-width: 100%;
+	width: 100%;
+}
+
+
+.formtable .input-box input[type="checkbox"] {
+width: 32px !important;
 
 }
+
+
 
 }
 
 @media all and (min-width: 480px) and (max-width: 640px) {
-#main-upb-form .allready-regis-device { margin-top: 34px; float:none !important;}
-.UltimatePB-Button, #upb-form input[type="submit"], #upb-form input[type="reset"] { float:none !important; margin:0px auto; }
-
+#main-upb-form .allready-regis-device {
+	margin-top: 34px;
+	float: none !important;
+}
+.UltimatePB-Button, #upb-form input[type="submit"], #upb-form input[type="reset"] {
+	float: none !important;
+	margin: 0px auto;
+}
 .UPB-margin-left3 {
-width: 73%;
-margin: 0px auto;
+	width: 73%;
+	margin: 0px auto;
+}
+.UPB-margin-left3 .UltimatePB-Button {
+	margin-bottom: 20px;
+}
+#main-upb-form .all-log-device.margin-left2 a {
+	float: left !important;
+	margin-bottom: 9px;
+	width: 100%;
+}
+.all-log-device.margin-left2 {
+	width: 64%;
 }
 
-.UPB-margin-left3 .UltimatePB-Button { margin-bottom:20px;}
-#main-upb-form .all-log-device.margin-left2 a { float: left !important;
-margin-bottom: 9px;
-width: 100%;}
-
-.all-log-device.margin-left2 {width: 64%;} 
+.default_profile_pic {width: 62% !important;line-height: 109px;
+height: 62% !important;}
 
 
+.formtable .input-box input[type="checkbox"] {
+width: 32px !important;float: none !important;
 
 }
 
+
+#registerform .formtable .input-box input[type="checkbox"] {
+width: 32px !important;
+float: left !important;
+}
+
+.upb-check-text {
+float: left;
+padding-left: 12px;
+}
+
+#progressbar {width: 49% !important;}
+
+}
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
 .UPB-margin-left3 {
-width: 59%;
-margin: 0px auto;
+	width: 59%;
+	margin: 0px auto;
 }
-.all-log-device.margin-left2 {width: 72%;} 
+.all-log-device.margin-left2 {
+	width: 72%;
+}
+
+
+.allready-regis-device.all-log-device.margin-left2 {
+width: 91% !important;
+}
+.box-view-main .box-view {width: 35% !important;}
+
+#main-upb-form .main-edit-profile .left-img-part .default_profile_pic {width: 151px !important;}
+
+#upb-form .custom_fields .user-custom_field {width: 93% !important;}
+
+#progressbar {width: 49% !important;}
 
 }
+
+@media all and (min-width: 1024px) and (max-width: 1200px) {
+.UPB-margin-left3 {
+	width: 59%;
+	margin: 0px auto;
+}
+.all-log-device.margin-left2 {
+	width: 72%;
+}
+
+
+.allready-regis-device.all-log-device.margin-left2 {
+width: 71%;
+}
+
+
+}
+
+
 
 /*-----------------------------------Responsive css End-----------------------------------*/
 
-
-
-
-
 /*-----------------------------------Removeble css css start-----------------------------------*/
-
-
 
 .site-content article {
 	border-bottom: 0px double #EDEDED !important;
 }
 /*-----------------------------------Removeble css css End-----------------------------------*/
-
-
 
 .UltimatePB-Button-inp.upb-success-page a {
 	background: #FA0;
@@ -580,7 +701,7 @@ margin: 0px auto;
 	border-radius: 5px;
 	text-shadow: 0px -1px 0px #E09A00;
 	padding: 7px 23px;
-	color: #FFF;
+	color: #FFF !important;
 	font-size: 16px;
 	font-family: Arial, "Helvetica LT Std", Tahoma;
 	text-decoration: none;
@@ -594,26 +715,131 @@ margin: 0px auto;
 	border-top-color: #F1B900;
 	text-shadow: 0px 0px 0px #E09A00;
 }
+#upb-form .edit-info .upb-name {
+	float: left;
+	font-weight: bold;
+	font-size: 100%;
+}
+#upb-form .edit-info .upb-button {
+	float: right;
+}
+.formtable .lable-text label span {
+	font-size: 70%;
+}
+.UltimatePB-Button, #upb-form input[type="submit"], #upb-form input[type="reset"] {
+	float: none !important;
+}
+.upb-margin-left3 {
+	width: 91%;
+	margin: 0px auto;
+}
+#main-upb-form .all-log-device.margin-left2 a {
+	float: left;
+}
+.UPB-Additional-Information {
+	width: 100%;
+	text-align: left;
+	padding-left: 15px;
+	font-weight: bold;
+	float: left;
+}
+.allready-regis-device.all-log-device.margin-left2 {
+	width: 58%;
+}
+
+.UltimatePB-Button-inp1.change_avatar_button input[type="submit"] { margin-left:0px !important;}
 
 
-#upb-form .edit-info .upb-name { float:left;font-weight: bold;
-font-size: 100%;}
+.upb-success-page.UltimatePB-Button-inp {
+	width: 30%;
+}
+.main-edit-profile .margin-left a {
+	text-decoration: none;
+}
+.default_profile_pic {
+	width: 155px;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 60px;
+	background-color: #f1f1f1 !important;
+	line-height: 150px;
+	height: 155px;
+}
+.default_profile_pic_listview {
+	width: 38px !important;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	background-color: #f1f1f1 !important;
+	line-height: 38px;
+	height: 38px;
+}
+.default_profile_pic_boxview {
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 200%;
+	float: left;
+	background-color: #f1f1f1 !important;
+	line-height: 380%;
+	height: 100%;
+}
+.left-img-part {
+	height: 211px;
+	overflow: hidden;
+}
+.change_profile_image {
+	float: none !important;
+	text-align: center;
+	display: block !important;
+	color: #000;
+	margin-top: -0px;
+	width: 183px;
+	background: #FFF;
+	opacity: 0.5;
+	z-index: 10;
+	background-image: url(../images/camera.png);
+	background-repeat: no-repeat;
+	background-position: 5px 10px;
+}
+.box-view-main .list-box .listview-proflle-name {
+	text-transform: capitalize;
+}
 
-#upb-form .edit-info .upb-button { float:right;  }
 
-.formtable .lable-text label span { font-size:70%;}
-.UltimatePB-Button, #upb-form input[type="submit"], #upb-form input[type="reset"] { float:none !important; }
+#main-upb-form .pagination ul.paginate li {margin: 0 0 0 3px !important;} 
+.upb_heading { width:100%; text-align:center;}
 
-.upb-margin-left3 {width: 91%;
-margin: 0px auto;}
+.formtable.upb_heading h1 {padding: 0px;
+margin: 0px;}
 
-#main-upb-form .all-log-device.margin-left2 a { float:left;}
+.box-view-img#userviewimg {} 
 
-.UPB-Additional-Information {width: 100%;
-text-align: left;
-padding-left: 15px;
-font-weight: bold; float:left;}
+.upb_box_wrapper { width:100%; float:left;}
 
-.allready-regis-device.all-log-device.margin-left2 {width: 55%;}
+.updated-successfully-upb-device .margin-left2.updated-successfully {
+width: 68%;
+margin: 0px auto;
+}
 
+#main-upb-form #your-profile .formtable.edit_profile_image_div {width: 80%;}
+#main-upb-form #your-profile .formtable.edit_profile_image_div .input-box  { width:50%;}
+#main-upb-form #your-profile .formtable.edit_profile_image_div .input-box input {width: 100%;}
 
+.UltimatePB-Button-inp1.change_avatar_button {float: left;
+margin: 0px;
+padding: 0px;}
+
+.remove_current_avatar {float: left;
+text-align: center;
+width: 100%;}
+
+/*----------------------Browser Css IE9 -------------*/
+
+@media screen\0 {
+	#upb-form .custom_fields .user-custom_field { width:95% !important; }
+	
+}
