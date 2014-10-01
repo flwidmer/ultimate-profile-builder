@@ -1,19 +1,20 @@
 === Ultimate Profile Builder By CMSHelpLive ===
 Contributors: CMSHelpLive
 Donate link: http://cmshelplive.com/
-Tags: admin, community, profile, registration, shortcode, membership, registration, user profile, user registration, custom field registration, customize profile, user fields, extra user fields, user group, groups, group fields, builder, profile builder, custom user profile, user profile page, edit profile, custom registration, custom registration form, custom registration page, registration page, user custom fields, user listing, front-end user listing, user login, user registration form, front-end login, front-end register, front-end registration, front-end edit profile, front-end user registration, user email, avatar upload, user avatar, profile image, registration form theme
+Tags: admin, community, profile, registration, shortcode, membership, registration, user profile, user registration, custom field registration, customize profile, user fields, extra user fields, user group, groups, group fields, builder, profile builder, custom user profile, user profile page, edit profile, custom registration, custom registration form, custom registration page, registration page, user custom fields, user listing, front-end user listing, user login, user registration form, front-end login, front-end register, front-end registration, front-end edit profile, front-end user registration, user email, avatar upload, user avatar, profile image, registration form theme, wordpress community, wordpress profile, wordpress registration, shortcode, wordpress membership, wordpress user profile, wordpress user registration, wordpress custom field registration, wordpress customize profile, wordpress user fields, wordpress extra user fields, wordpress user group, wordpress groups, wordpress group fields, wordpress profile builder, wordpress custom user profile, wordpress user profile page, wordpress edit profile, wordpress custom registration, wordpress custom registration form, wordpress custom registration page, wordpress registration page, wordpress user custom fields, wordpress user listing, wordpress front-end user listing, wordpress user login, wordpress user registration form, wordpress front-end login, wordpress front-end register, wordpress front-end registration, wordpress front-end edit profile, wordpress front-end user registration, wordpress user email, wordpress avatar upload, wordpress user avatar, wordpress profile image, wordpress registration form theme
 
 Requires at least: 3.5
 Tested up to: 4.1
-Stable tag: 2.0
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Now you can create custom profiles on your WordPress site with custom profile fields, user roles, front-end registrations and profile listing pages.
+Supercharge your WordPress site's user pages with tons of additional features, customizations and power tools. 
 
 == Description ==
 
 > Totally revamped version 2. Now with a brand new GUI and additional custom field types! 
+> FACEBOOK integration coming up in next release! 
 
 Ultimate Profile Builder by CMSHelpLive lets you create and manage profiles on your WordPress site! You can define custom user roles like Authors, Actors, Tennis Players or anything you want. It will also allow vistors to register on the site, fill out custom fields specific to user roles and upload profile images. Their profiles can be edited by the users anytime by logging into the profile area of the site. You can display member profiles as list or box view. The profile view will show image thumbnail, profile snippets and user posts contribution.
 
@@ -117,6 +118,10 @@ Yes, a custom field can be assigned to more than single user role in field creat
 
 == Changelog ==
 
+= 2.1 =
+* Bug fixes
+* Resolved a conflict with Page Builder Plugin
+
 = 2.0 =
 * Totally revamped GUI.
 * Made compatible with WP 4.1
@@ -138,6 +143,12 @@ Yes, a custom field can be assigned to more than single user role in field creat
 * Added Custom Fields
 
 == Upgrade Notice ==
+
+= 2.1 =
+Bug Fixes
+
+= 2.0 =
+*New field types and GUI
 
 = 1.1 =
 * Bug Fixes
