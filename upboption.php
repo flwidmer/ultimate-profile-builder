@@ -103,14 +103,6 @@ float:left;
           <div id="profile-builder" class="block ui-tabs-panel ui-widget-content ui-corner-bottom theme_panel"> 
             
             <!--<h2>Ultimate Profile Builder</h2>-->
-            
-            <h3>Select a predefined color scheme</h3>
-            <p>Choose a predefined color scheme here. You can edit the settings of the scheme below then.</p>
-            <p id="theme_loader"><img src="<?php echo $path; ?>/images/ajax-loader.gif" /></p>
-            <button name="theme1" onClick="activate_theme(this)" class="default" value="light" <?php if (checkfieldname("upb_theme","light")==true){ echo 'style="opacity:1"';}?> >Default</button>
-            <p></p>
-            <br>
-            <br>
             <form method="post">
     		<div class="profile-top-user" style="float: left;margin-bottom: 10px;margin-top: 10px;width: 96%;font-size: 16px;padding-left: 10px;
 line-height: 25px;">Custom Text for Registration Page:</div>
@@ -121,10 +113,54 @@ line-height: 25px;">Custom Text for Registration Page:</div>
               <textarea id="RegCustomText" name="RegCustomText" cols="50" rows="10"><?php echo $data;?></textarea>
               <br>
               <br>
+              
+              <div class="profile-top-user" style="float: left;margin-bottom: 10px;margin-top: 10px;width: 96%;font-size: 16px;padding-left: 10px;
+line-height: 25px;">Welcome Email Subject : <span class="pro_banner">Pro</span> <span class="pro_text_link"><a href="http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html">GO PRO NOW!</a></span></div>
+              <?php
+			   $qry="SELECT value FROM $upb_option WHERE fieldname='upb_welcome_email_subject'";
+			   $data = $wpdb->get_var($qry);
+			   ?>
+              <input type="text" name="welcomeSubject" id="welcomeSubject" value="<?php //echo $data; ?>" readonly/>
+              <br>
+              <br>
+              <div class="profile-top-user" style="float: left;margin-bottom: 10px;margin-top: 10px;width: 96%;font-size: 16px;padding-left: 10px;
+line-height: 25px;">Welcome Email Message : <span class="pro_banner">Pro</span> <span class="pro_text_link"><a href="http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html">GO PRO NOW!</a></span></div>
+              <?php
+		    	$qry="SELECT value FROM $upb_option WHERE fieldname='upb_welcome_email_message'";
+				$data = $wpdb->get_var($qry);
+			   ?>
+              <textarea id="RegWelcomeMessage" name="RegWelcomeMessage" cols="50" rows="10" readonly><?php //echo $data; ?></textarea>
+              <br>
+              <br>
+              
               <input type="submit"  class="button-primary" value="Save" name="personalization" id="personalization" />
               </form>
               <br>
-              <br>           
+              <br> 
+              <h3>Select a predefined color scheme <span class="pro_banner">Pro</span> <span class="pro_text_link"><a href="http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html">GO PRO NOW!</a></span></h3>
+            <p>Choose a predefined color scheme here. You can edit the settings of the scheme below then.</p>
+            <p id="theme_loader"><img src="<?php echo $path; ?>/images/ajax-loader.gif" /></p>
+            <button name="theme1" class="default" value="light" <?php if (checkfieldname("upb_theme","light")==true){ echo 'style="opacity:1"';}?> disabled>Default</button>
+            <button name="theme2" class="light-green" value="lightgreen" <?php if (checkfieldname("upb_theme","lightgreen")==true){ echo 'style="opacity:1"';}?> disabled>Light Green</button>
+            <button name="theme3" class="light-pink" value="lightpink" <?php if (checkfieldname("upb_theme","lightpink")==true){ echo 'style="opacity:1"';}?> disabled>Light Pink</button>
+            <button name="theme4" class="light-red" value="lightred" <?php if (checkfieldname("upb_theme","lightred")==true){ echo 'style="opacity:1"';}?> disabled>Light Red</button>
+            <button name="theme5" class="light-blue" value="lightblue" <?php if (checkfieldname("upb_theme","lightblue")==true){ echo 'style="opacity:1"';}?> disabled>Light Blue</button>
+            <button name="theme8" class="aqua" value="aqua" <?php if (checkfieldname("upb_theme","aqua")==true){ echo 'style="opacity:1"';}?> disabled>Aqua</button>
+            <button name="theme9" class="baby-blue" value="babyblue" <?php if (checkfieldname("upb_theme","babyblue")==true){ echo 'style="opacity:1"';}?> disabled>Baby Blue</button>
+            <button name="theme10" class="black" value="black" <?php if (checkfieldname("upb_theme","black")==true){ echo 'style="opacity:1"';}?> disabled>Black</button>
+            <button name="theme11" class="blue" value="blue" <?php if (checkfieldname("upb_theme","blue")==true){ echo 'style="opacity:1"';}?> disabled>Blue</button>
+            <button name="theme12" class="blue-green" value="bluegreen" <?php if (checkfieldname("upb_theme","bluegreen")==true){ echo 'style="opacity:1"';}?> disabled>Blue Green</button>
+            <button name="theme13" class="blue-violet" value="blueviolet" <?php if (checkfieldname("upb_theme","blueviolet")==true){ echo 'style="opacity:1"';}?> disabled>Blue Violet</button>
+            <button name="theme14" class="brown" value="brown" <?php if (checkfieldname("upb_theme","brown")==true){ echo 'style="opacity:1"';}?> disabled>Brown</button>
+            <button name="theme15" class="crimson" value="crimson" <?php if (checkfieldname("upb_theme","crimson")==true){ echo 'style="opacity:1"';}?> disabled>Crimson</button>
+            <button name="theme16" class="deep-pink" value="deeppink" <?php if (checkfieldname("upb_theme","deeppink")==true){ echo 'style="opacity:1"';}?> disabled>Deep Pink</button>
+            <button name="theme17" class="forest-green" value="forestgreen" <?php if (checkfieldname("upb_theme","forestgreen")==true){ echo 'style="opacity:1"';}?> disabled>forest Green</button>
+            <button name="theme18" class="fuchsia" value="fuchsia" <?php if (checkfieldname("upb_theme","fuchsia")==true){ echo 'style="opacity:1"';}?> disabled>Fuchsia</button>
+            <button name="theme6" class="light-mordern-green" value="lightmoderngreen" <?php if (checkfieldname("upb_theme","lightmoderngreen")==true){ echo 'style="opacity:1"';}?> disabled>Light Mordern Green</button>
+            <button name="theme7" class="light-mordern-yellow" value="lightmodernyellow" <?php if (checkfieldname("upb_theme","lightmodernyellow")==true){ echo 'style="opacity:1"';}?> disabled>Light Mordern Yellow</button>
+            <p></p>
+            <br>
+            <br>          
           </div>
         </div>
         
@@ -263,6 +299,70 @@ line-height: 25px;">Custom Text for Registration Page:</div>
                    </div>
                 </div>
               </div>
+              <div class="hid-show-option">
+                <div class="profile-top-user">
+                  <div class="profile-user-group">Third Party Plugin Integration <span class="pro_banner">Pro</span></div>
+                  <div class="profile-visibility">Visibility <span class="pro_text_link"><a href="http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html">GO PRO NOW!</a></span></div>
+                </div>
+                <div class="option-main">
+                  <div class="user-group">Business Directory Plugin</div>
+                  <div class="user-group-option">
+                    <input name="directoryshowhide" id="directoryshowhide" type="checkbox" class="upb_toggle" value="yes" style="opacity:0" disabled/>
+                   <label for="directoryshowhide"></label>
+                   </div>
+                </div>
+                <div class="option-main">
+                  <div class="user-group">WooCommerce</div>
+                  <div class="user-group-option">
+                    <input name="wooproductshowhide" id="wooproductshowhide" type="checkbox" class="upb_toggle" value="yes" style="opacity:0" disabled/>
+                  <label for="wooproductshowhide"></label>
+                  </div>
+                </div>
+                <div class="option-main">
+                  <div class="user-group">WP eCommerce</div>
+                  <div class="user-group-option">
+                    <input name="ecoproductshowhide" id="ecoproductshowhide" type="checkbox" class="upb_toggle" value="yes" style="opacity:0" disabled/>
+                  <label for="ecoproductshowhide"></label>
+                  </div>
+                </div>
+                <div class="option-main">
+                  <div class="user-group">bbPress</div>
+                  <div class="user-group-option">
+                    <input name="fourmshowhide" id="fourmshowhide" onClick="jQuery('.bbpress_option').show()" type="checkbox" class="upb_toggle" style="opacity:0" value="yes" disabled/>
+                   <label for="fourmshowhide"></label>
+                   </div>
+                </div>
+                <div class="bbpress_option" <?php echo 'style="display:none;"'; ?> >
+                  <div class="option-main">
+                    <div class="user-group">Topics</div>
+                    <div class="user-group-option">
+                      <input name="topicshowhide" id="topicshowhide" type="checkbox" class="upb_toggle" value="yes" style="opacity:0" disabled/>
+                     <label for="topicshowhide"></label>
+                     </div>
+                  </div>
+                  <div class="option-main">
+                    <div class="user-group">Replies </div>
+                    <div class="user-group-option">
+                      <input name="replieshowhide" id="replieshowhide" type="checkbox" class="upb_toggle" value="yes" style="opacity:0" disabled/>
+                    <label for="replieshowhide"></label>
+                    </div>
+                  </div>
+                  <div class="option-main">
+                    <div class="user-group">Favourites </div>
+                    <div class="user-group-option">
+                      <input name="favouriteshowhide" id="favouriteshowhide" type="checkbox" class="upb_toggle" value="yes" style="opacity:0" disabled/>
+                    <label for="favouriteshowhide"></label>
+                    </div>
+                  </div>
+                  <div class="option-main">
+                    <div class="user-group">Subscriptions </div>
+                    <div class="user-group-option">
+                      <input name="subscriptionshowhide" id="subscriptionshowhide" type="checkbox" class="upb_toggle" value="yes" style="opacity:0" disabled/>
+                    	<label for="subscriptionshowhide"></label>
+                     </div>
+                  </div>
+                </div>
+              </div>
               <br />
               <br />
               <p> Note: These settings only apply to information displayed on individual profile pages. Some of the fields may still be visible on profiles list page. </p>
@@ -288,6 +388,14 @@ line-height: 25px;">Custom Text for Registration Page:</div>
             </select>
             <br>
             <br>
+            <font id="settingblackwhiteimage">Show Black & White Profile Image <span class="pro_banner">Pro</span></font>
+            <select name="blackwhiteimage" class="wppb_general_settings2" disabled>
+              <option value="yes">Yes</option>
+              <option value="no" selected>No</option>
+            </select>
+            <span class="pro_text_link"><a href="http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html">GO PRO NOW!</a></span>
+            <br>
+            <br>
             <?php
 
 	global $wpdb;
@@ -297,10 +405,6 @@ line-height: 25px;">Custom Text for Registration Page:</div>
 	$select="select * from $upb_option where fieldname='upb_profile_max_resutls'";
 
 	$data = $wpdb->get_results($select);
-
-	//$data=mysql_query($select);
-
-	//$row = mysql_fetch_array($data);
 
 	$max_results = $data[0]->value;
 
@@ -384,29 +488,3 @@ function checkit(val)
 	var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
 	document.getElementById('TabbedPanelsTab'+<?php echo $selectedTabId; ?>).click();
 </script> 
-<script type="text/javascript">
-
-function activate_theme(a) 
-{ //user types username on inputfiled
-
-	 jQuery("#theme_loader").show();
-
-	 theme = jQuery(a).val();
-	 
-   jQuery.post('<?php echo get_option('siteurl').'/wp-admin/admin-ajax.php';?>?action=activate_theme&cookie=encodeURIComponent(document.cookie)', {'theme':theme}, function(data) { 
-   //make AJAX call to check_username.php
-	   if(data=="success")
-	   {
-		  jQuery("#theme_loader").hide();
-		  jQuery('.theme_panel button').css('opacity','0.5');
-		  jQuery(a).css('opacity','1');
-	   }
-	   else
-	   {
-		 jQuery("#theme_loader").hide();
-	   	 jQuery(a).css('opacity','.5');
-	   }
-    //dump the data received from PHP page
-   });
-}
-</script>

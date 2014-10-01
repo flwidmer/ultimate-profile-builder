@@ -224,7 +224,7 @@ function getfields(a)
 if(isset($_POST['field_submit'])) //Updates the existing field with new submitted changes
 {
 $usergroups = implode(",",$_POST['field_user_groups']);	
-$qry = "update $upb_fields set Type = '".$_POST['select_type']."',Name = '".$_POST['field_name']."', Value ='".$_POST['field_value']."', Class ='".$_POST['field_class']."', Max_Length ='".$_POST['field_maxLenght']."',Cols='".$_POST['field_cols']."',Rows='".$_POST['field_rows']."',Option_Value ='".$_POST['field_Options']."', Description = '".$_POST['field_Des']."', `Require` ='".$_POST['field_require']."',Readonly ='".$_POST['field_readonly']."',Visibility='".$_POST['field_visibility']."',Ordering ='".$_POST['field_ordering']."',user_group='".$usergroups."',registration='".$_POST['field_registration']."' where Id=".$_POST['field_id'];
+$qry = "update $upb_fields set Type = '".$_POST['select_type']."',Name = '".$_POST['field_name']."', Value ='".$_POST['field_value']."', Class ='".$_POST['field_class']."', Max_Length ='".$_POST['field_maxLenght']."',Cols='".$_POST['field_cols']."',Rows='".$_POST['field_rows']."',Option_Value ='".$_POST['field_Options']."', Description = '".$_POST['field_Des']."', Ordering ='".$_POST['field_ordering']."', user_group='".$usergroups."' where Id=".$_POST['field_id'];
 
 $wpdb->query($qry);
 
@@ -331,7 +331,7 @@ foreach($roles as $key=>$role)
         </p>
         <p id="classfield">
           <label for="field_class">CSS Class Attribute</label>
-          <input type="text" name="field_class" id="field_class">
+          <input type="text" name="field_class" id="field_class" value="<?php echo $row->Class;?>">
         </p>
         <p id="maxlenghtfield">
           <label for="field_maxLenght">MaxLenght</label>
@@ -353,6 +353,33 @@ foreach($roles as $key=>$role)
           <label for="field_Des">Description</label>
           <textarea type="text" name="field_Des" id="field_Des" cols="25" rows="5"><?php echo $row->Description;?></textarea>
         </p>
+        
+        <p class="rules" id="rulesfield" style="width:100%;">Rules</p>
+        <p id="requirefield">
+          <label for="field_require">Is Required <span class="pro_banner">Pro</span></label>
+          <input type="checkbox" name="field_require" id="field_require" value="1" style="width:auto;" disabled/>
+           <span class="pro_text_link"><a href="http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html">GO PRO NOW!</a></span>
+        </p>
+        <p id="readonlyfield">
+          <label for="field_readonly">Is Read Only <span class="pro_banner">Pro</span></label>
+          <input type="checkbox" name="field_readonly" id="field_readonly" value="1" style="width:auto;" disabled/>
+          <span class="pro_text_link"><a href="http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html">GO PRO NOW!</a></span>
+        </p>
+        <p id="registrationformfield">
+          <label for="field_registration">Show in Registration Form <span class="pro_banner">Pro</span></label>
+          <input type="checkbox" name="field_registration" id="field_registration" value="1" style="width:auto;" disabled/>
+           <span class="pro_text_link"><a href="http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html">GO PRO NOW!</a></span>
+        </p>
+        <p id="visibilityfield">
+          <label for="field_visibility">Visibility <span class="pro_banner">Pro</span></label>
+          <select type="checkbox" name="field_visibility" id="field_visibility" disabled>
+            <option value="1">Public</option>
+            <option value="2">Registered</option>
+            <option value="3">Private</option>
+          </select>
+           <span class="pro_text_link"><a href="http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html">GO PRO NOW!</a></span>
+        </p>
+        
         <p id="orderingfield">
           <label for="field_ordering">Ordering</label>
           <select name="field_ordering" id="field_ordering" required>

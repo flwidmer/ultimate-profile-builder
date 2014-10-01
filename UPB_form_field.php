@@ -12,7 +12,7 @@ if($_POST['select_type']=='term_checkbox')
 	$_POST['field_registration']=1;
 }
 $usergroups = implode(",",$_POST['field_user_groups']);	
-$qry = "insert into $upb_fields values('','".$_POST['select_type']."','".$_POST['field_name']."','".$_POST['field_value']."','".$_POST['field_class']."','".$_POST['field_maxLenght']."','".$_POST['field_cols']."','".$_POST['field_rows']."','".$_POST['field_Options']."','".$_POST['field_Des']."','".$_POST['field_require']."','".$_POST['field_readonly']."','".$_POST['field_visibility']."','".$_POST['field_ordering']."','".$usergroups."','".$_POST['field_registration']."')";
+$qry = "insert into $upb_fields values('','".$_POST['select_type']."','".$_POST['field_name']."','".$_POST['field_value']."','".$_POST['field_class']."','".$_POST['field_maxLenght']."','".$_POST['field_cols']."','".$_POST['field_rows']."','".$_POST['field_Options']."','".$_POST['field_Des']."','','','1','".$_POST['field_ordering']."','".$usergroups."','')";
 
 $wpdb->query($qry);
 
@@ -342,6 +342,32 @@ foreach($roles as $key=>$role)
           <label for="field_Des">Description</label>
           <textarea type="text" name="field_Des" id="field_Des" cols="25" rows="5"></textarea>
         </p>
+        <p class="rules" id="rulesfield" style="width:100%;">Rules</p>
+        <p id="requirefield">
+          <label for="field_require">Is Required <span class="pro_banner">Pro</span></label>
+          <input type="checkbox" name="field_require" id="field_require" value="1" style="width:auto;" disabled/>
+           <span class="pro_text_link"><a href="http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html">GO PRO NOW!</a></span>
+        </p>
+        <p id="readonlyfield">
+          <label for="field_readonly">Is Read Only <span class="pro_banner">Pro</span></label>
+          <input type="checkbox" name="field_readonly" id="field_readonly" value="1" style="width:auto;" disabled />
+          <span class="pro_text_link"><a href="http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html">GO PRO NOW!</a></span>
+        </p>
+        <p id="registrationformfield">
+          <label for="field_registration">Show in Registration Form <span class="pro_banner">Pro</span></label>
+          <input type="checkbox" name="field_registration" id="field_registration" value="1" style="width:auto;" disabled/>
+           <span class="pro_text_link"><a href="http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html">GO PRO NOW!</a></span>
+        </p>
+        <p id="visibilityfield">
+          <label for="field_visibility">Visibility <span class="pro_banner">Pro</span></label>
+          <select type="checkbox" name="field_visibility" id="field_visibility" disabled>
+            <option value="1">Public</option>
+            <option value="2">Registered</option>
+            <option value="3">Private</option>
+          </select>
+           <span class="pro_text_link"><a href="http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html">GO PRO NOW!</a></span>
+        </p>
+        
         <p id="orderingfield">
           <label for="field_ordering">Ordering</label>
           <select name="field_ordering" id="field_ordering" required>

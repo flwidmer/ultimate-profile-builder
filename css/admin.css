@@ -1376,3 +1376,15 @@ padding-top: 8px !important;}
 .profile-user-group { padding-top: 8px !important;}
 
 .profile-visibility {padding-top: 8px !important;}
+
+.pro_banner{ color:#c20000; font-size:12px; padding:0px; border:1px solid #c20000; width: 32px !important;
+display: inline-block;
+text-align: center;-webkit-border-radius: 12px;
+-moz-border-radius: 12px;
+border-radius: 12px; line-height:15px !important;}
+.pro_text_link{ color:#c20000; font-size:12px;float:right; background-image: url('../images/pro-arrow.png');
+background-repeat: no-repeat;background-position: left;
+padding-left: 14px;
+margin-right: 10px;
+margin-top: 4px;}
+.pro_text_link a{ color:#c20000; font-size:12px; text-decoration:none;}

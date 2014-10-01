@@ -6,9 +6,9 @@
 
 		Description: Login, registration, edit profile, and password recover shortcodes for the front-end and a complete profile structure.
 
-		Version: 2.0
+		Version: 2.1
 
-		Author: Vincent Andrew
+		Author: CMSHelpLive Team
 
 		Author URI: http://cmshelplive.com/
 
@@ -321,32 +321,47 @@ add_action('admin_menu', 'ultimate_profile_builder_menu');
 		add_submenu_page("UltimatePB_settings","Add User Role","Add User Role","manage_options","UltimatePB_Custom_User_Role","UltimatePB_Custom_User_Role");
 		add_submenu_page("UltimatePB_settings","Manage User Roles","Manage User Roles","manage_options","UltimatePB_Manage_Custom_User_Roles","UltimatePB_Manage_Custom_User_Roles");
 		add_submenu_page("UltimatePB_settings","Manage Custom Fields","Manage Custom Fields","manage_options","UltimatePB_Fields","UltimatePB_Fields");
+		add_submenu_page("UltimatePB_settings","Support","Support","manage_options","UltimatePB_Support","UltimatePB_Support");
+		add_submenu_page("UltimatePB_settings","Pro","Pro","manage_options","UltimatePB_Premium","UltimatePB_Premium");
 		add_submenu_page("","New Field","New Field","manage_options","UltimatePB_Field","UltimatePB_Field");
 		add_submenu_page("","Edit Field","Edit Field","manage_options","UltimatePB_Field_edit","UltimatePB_Field_edit");
 	}
 	
 	function add_upb_menu_adminbar() {
-	global $wp_admin_bar;
+		global $wp_admin_bar;
 
-	$wp_admin_bar->add_menu( array(
-		'id'    => 'add-upb-user-role',
-		'title' => 'User Role',
-		'href'  => admin_url().'admin.php?page=UltimatePB_Custom_User_Role',
-		'parent'=>'new-content'
-	));
-	$wp_admin_bar->add_menu( array(
-		'id'    => 'add-upb-custom-field',
-		'title' => 'User Field',
-		'href'  => admin_url().'admin.php?page=UltimatePB_Field',
-		'parent'=>'new-content'
-	));
-}
-add_action( 'wp_before_admin_bar_render', 'add_upb_menu_adminbar' ); 
+		$wp_admin_bar->add_menu( array(
+			'id'    => 'add-upb-user-role',
+			'title' => 'User Role',
+			'href'  => admin_url().'admin.php?page=UltimatePB_Custom_User_Role',
+			'parent'=>'new-content'
+		));
+		$wp_admin_bar->add_menu( array(
+			'id'    => 'add-upb-custom-field',
+			'title' => 'User Field',
+			'href'  => admin_url().'admin.php?page=UltimatePB_Field',
+			'parent'=>'new-content'
+		));
+	}
+	add_action( 'wp_before_admin_bar_render', 'add_upb_menu_adminbar' ); 
 	
 	function UltimatePB_settings()
 	{
 		include 'UPB_config.php';
 		include 'upboption.php';
+	}
+	
+	function UltimatePB_Support()
+	{
+		include 'UPB_config.php';
+		include 'UPB_support.php';
+	}
+	
+	function UltimatePB_Premium()
+	{
+		wp_enqueue_style( 'premium.css', plugin_dir_url(__FILE__) . 'css/premium.css');
+		include 'UPB_config.php';
+		include 'UPB_premium.php';
 	}
 	
 	function UltimatePB_Fields()
@@ -464,3 +479,5 @@ add_action( 'wp_before_admin_bar_render', 'add_upb_menu_adminbar' );
 	
 		include('activate_theme.php');die;
 	}
+add_filter( 'widget_text', 'shortcode_unautop');
+add_filter( 'widget_text', 'do_shortcode');
