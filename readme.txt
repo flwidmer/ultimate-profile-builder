@@ -5,7 +5,7 @@ Tags: wordpress profile plugin, wp profile plugin, wordpress profile system, wor
 
 Requires at least: 3.5
 Tested up to: 4.1
-Stable tag: 2.1
+Stable tag: 2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,7 @@ Supercharge your WordPress site's user pages with tons of additional features, c
 == Description ==
 
 > Totally revamped version 2. Now with a brand new GUI and additional custom field types! 
-> FACEBOOK integration coming up in next release! 
+> Now with Facebook integration
 
 Ultimate Profile Builder by CMSHelpLive lets you create and manage profiles on your WordPress site! You can define custom user roles like Authors, Actors, Tennis Players or anything you want. It will also allow vistors to register on the site, fill out custom fields specific to user roles and upload profile images. Their profiles can be edited by the users anytime by logging into the profile area of the site. You can display member profiles as list or box view. The profile view will show image thumbnail, profile snippets and user posts contribution.
 
@@ -39,6 +39,7 @@ All user activity takes place on the front end, and logging in and editing does 
 * Administrator can either allow password to be sent automatically or user defined.
 * Password strength is displayed graphically during registration.
 * Show captcha during registration.
+* Administrators can allow users to login using their Facebook profiles.
 * After login, user the option to go straight to profile page.
 * Users can edit their profile anytime.
 * Profile Image: Image associated with the corresponding user.
@@ -118,6 +119,10 @@ Yes, a custom field can be assigned to more than single user role in field creat
 
 == Changelog ==
 
+= 2.2 =
+* Bug fixes
+* Added Facebook integration
+
 = 2.1 =
 * Bug fixes
 * Resolved a conflict with Page Builder Plugin
@@ -143,6 +148,9 @@ Yes, a custom field can be assigned to more than single user role in field creat
 * Added Custom Fields
 
 == Upgrade Notice ==
+
+= 2.2 =
+* Regular update
 
 = 2.1 =
 Bug Fixes
