@@ -5,7 +5,7 @@ Tags: wordpress profile plugin, wp profile plugin, wordpress profile system, wor
 
 Requires at least: 3.5
 Tested up to: 4.1
-Stable tag: 2.2
+Stable tag: 2.21
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,7 @@ Supercharge your WordPress site's user pages with tons of additional features, c
 > Totally revamped version 2. Now with a brand new GUI and additional custom field types! 
 > Now with Facebook integration
 
-Ultimate Profile Builder by CMSHelpLive lets you create and manage profiles on your WordPress site! You can define custom user roles like Authors, Actors, Tennis Players or anything you want. It will also allow vistors to register on the site, fill out custom fields specific to user roles and upload profile images. Their profiles can be edited by the users anytime by logging into the profile area of the site. You can display member profiles as list or box view. The profile view will show image thumbnail, profile snippets and user posts contribution.
+Ultimate Profile Builder by CMSHelpLive lets you create and manage profiles on your WordPress site! You can define custom user roles like Authors, Actors, Tennis Players or anything you want. It will also allow visitors to register on the site, fill out custom fields specific to user roles and upload profile images. Their profiles can be edited by the users anytime by logging into the profile area of the site. You can display member profiles as list or box view. The profile view will show image thumbnail, profile snippets and user posts contribution.
 
 All user activity takes place on the front end, and logging in and editing does not requires users to go into the dashboard area. This is especially important if you want your users to have a consistent experience across the website.
 
@@ -33,7 +33,7 @@ All user activity takes place on the front end, and logging in and editing does 
 * Administrator can define default value in certain fields.
 * Administrator can create custom user Roles.
 * Administrator can set permission levels to new user Roles based on existing roles. 
-* Administrator can create different registration forms for different user Roler(s).
+* Administrator can create different registration forms for different user Role(s).
 * Administrator can show/ hide role-wise visibility of administrator bar.
 * Administrator can assign custom field to specific user role or multiple roles.
 * Administrator can either allow password to be sent automatically or user defined.
@@ -47,19 +47,19 @@ All user activity takes place on the front end, and logging in and editing does 
 * Users list can be displayed on any page in grid or list view by administrator.
 * Lists can be configures to show either all roles or single role type. For example a page can show either all the Authors or all the Publishers or both together.
 * Administrator can define number of rows and columns in grid view.
-* Administrato can define maximum number of profiles on a single profile list page in list view.
+* Administrator can define maximum number of profiles on a single profile list page in list view.
 * User lists will show avatar, name, intro and number of posts.
 * Site visitor can search profiles
-* Site vistor can change profile list view. This is done using JQery animation
+* Site visitor can change profile list view. This is done using JQery animation
 * Profile list uses AJAX pagination
 * Made in HTML5 and CSS3: Offers cross-compatibilty across all themes.
-* RESPONSIVE Layout: Offers cross compatibilty across mobile devices.
+* RESPONSIVE Layout: Offers cross compatibility across mobile devices.
 * Light, Clean and Professional Default Theme. Fits any site easily.
 
 **Short Codes**
 
 * **[UPB_auth]** - for a log-in form.
-* **[UPB_account]** for default registration form OR **[UPB_account role="Subscriber"]** - to add a registration form specific to a user role or group. You can replace "Subscriber" with any other role or group being used on your website. **[UPB_profile]** - to grant users a front-end acces to their personal informatio (requires user to be logged in). 
+* **[UPB_account]** for default registration form OR **[UPB_account role="Subscriber"]** - to add a registration form specific to a user role or group. You can replace "Subscriber" with any other role or group being used on your website. **[UPB_profile]** - to grant users a front-end access to their personal information (requires user to be logged in). 
 * **[UPB_profile_list]** - to view a list of all users on the site OR **[UPB_profile_list role="Subscriber"]** for showing user list for a specific role or a group of users. Replace "Subscriber" with group name.
 
 
@@ -88,7 +88,7 @@ All user activity takes place on the front end, and logging in and editing does 
 
 == Installation ==
 
-1. Download Ulitmate Profile Builder by CMSHelpLive plugin
+1. Download Ultimate Profile Builder by CMSHelpLive plugin
 
 2. Go to your Dashboard and locate Plugins tab. Click on Upload Plugin and specify the path of downloaded plugin in the text box.
 
@@ -100,9 +100,9 @@ Also, there will be **Ultimate Profile Builder** tab available on Dashboard to m
 
 == Frequently Asked Questions ==
 
-= Can seperate custom fields can be set for different users? =
+= Can separate custom fields can be set for different users? =
 
-Yes, it is possible to set seperate custom fields for each user role.
+Yes, it is possible to set separate custom fields for each user role.
 
 = Can a custom field be applied to more than single user role? =
 
@@ -118,6 +118,9 @@ Yes, a custom field can be assigned to more than single user role in field creat
 5. Admin bar visibility toggle
 
 == Changelog ==
+
+= 2.21 =
+* Removed some GUI elements
 
 = 2.2 =
 * Bug fixes
@@ -148,6 +151,9 @@ Yes, a custom field can be assigned to more than single user role in field creat
 * Added Custom Fields
 
 == Upgrade Notice ==
+
+= 2.21 =
+* GUI changes
 
 = 2.2 =
 * Regular update
