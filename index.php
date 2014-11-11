@@ -8,7 +8,7 @@
 
 		Description: Supercharge your WordPress site's user pages with tons of additional features, customizations and power tools.
 
-		Version: 2.2.1
+		Version: 2.2.2
 
 		Author: CMSHelpLive Team
 
@@ -254,9 +254,7 @@
 
   `registration` varchar(256) DEFAULT NULL,
 
-  PRIMARY KEY (`Id`),
-
-  UNIQUE KEY( `Name`) )";
+  PRIMARY KEY (`Id`) )";
 
 
 
