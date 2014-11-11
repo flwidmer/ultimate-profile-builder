@@ -5,7 +5,7 @@ Tags: wordpress profile plugin, wp profile plugin, wordpress profile system, wor
 
 Requires at least: 3.5
 Tested up to: 4.1
-Stable tag: 2.2.1
+Stable tag: 2.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -119,8 +119,8 @@ Yes, a custom field can be assigned to more than single user role in field creat
 
 == Changelog ==
 
-= 2.21 =
-* Removed some GUI elements
+= 2.2.2 =
+* Fixed a glitch where custom fields would not save in old database systems.
 
 = 2.2.1 =
 * Bug fixes
@@ -152,7 +152,8 @@ Yes, a custom field can be assigned to more than single user role in field creat
 
 == Upgrade Notice ==
 
-
+= 2.2.2 =
+* Bug Fixes
 
 = 2.2.1 =
 * GUI changes
