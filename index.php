@@ -8,7 +8,7 @@
 
 		Description: Supercharge your WordPress site's user pages with tons of additional features, customizations and power tools.
 
-		Version: 2.2.2
+		Version: 2.2.3
 
 		Author: CMSHelpLive Team
 
@@ -160,8 +160,10 @@
 
 		(36, 'upb_facebook_app_id', ''),
 
-		(37, 'upb_facebook_app_secret', '')
-
+		(37, 'upb_facebook_app_secret', ''),
+		(38,'upb_recaptcha','no'),
+		(39,'upb_public_key',''),
+		(40,'upb_private_key','')
 		";
 
 
