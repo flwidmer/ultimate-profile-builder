@@ -119,12 +119,8 @@ Yes, a custom field can be assigned to more than single user role in field creat
 
 == Changelog =
 
-=
-
 = 2.2.3 =
 * Added toggle switch to turn off captcha.
-
-=
 
 = 2.2.2 =
 * Fixed a glitch where custom fields would not save in old database systems.
@@ -158,8 +154,6 @@ Yes, a custom field can be assigned to more than single user role in field creat
 * Added Custom Fields
 
 == Upgrade Notice ==
-
-=
 
 = 2.2.3 =
 * Added toggle switch to turn off captcha.
