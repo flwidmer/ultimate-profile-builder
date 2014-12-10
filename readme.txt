@@ -5,7 +5,7 @@ Tags: wordpress profile plugin, wp profile plugin, wordpress profile system, wor
 
 Requires at least: 3.5
 Tested up to: 4.1
-Stable tag: 2.2.3
+Stable tag: 2.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -119,6 +119,9 @@ Yes, a custom field can be assigned to more than single user role in field creat
 
 == Changelog =
 
+= 2.2.4 =
+* Bug Fixes.
+
 = 2.2.3 =
 * Added toggle switch to turn off captcha.
 
@@ -154,6 +157,9 @@ Yes, a custom field can be assigned to more than single user role in field creat
 * Added Custom Fields
 
 == Upgrade Notice ==
+
+= 2.2.4 =
+* Bug Fixes.
 
 = 2.2.3 =
 * Added toggle switch to turn off captcha.
