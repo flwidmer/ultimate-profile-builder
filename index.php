@@ -8,7 +8,7 @@
 
 		Description: Supercharge your WordPress site's user pages with tons of additional features, customizations and power tools.
 
-		Version: 2.2.4
+		Version: 2.3.0
 
 		Author: CMSHelpLive Team
 
