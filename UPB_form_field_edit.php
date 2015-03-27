@@ -670,7 +670,7 @@ foreach($roles as $key=>$role)
 
         <p id="maxlenghtfield">
 
-          <label for="field_maxLenght">MaxLenght</label>
+          <label for="field_maxLenght">Maximum Length</label>
 
           <input type="text" name="field_maxLenght" id="field_maxLenght" value="<?php echo $row->Max_Length;?>">
 
