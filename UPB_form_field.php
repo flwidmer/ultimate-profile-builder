@@ -10,23 +10,29 @@ $upb_usermeta =$wpdb->prefix."usermeta";
 
 $path =  plugin_dir_url(__FILE__); 
 
-
+$qrytotalrows = "SELECT count(*) FROM $upb_fields";
+$totalrows = $wpdb->get_var($qrytotalrows) + 1;
 
 if(isset($_POST['field_submit']))/*Saves the field after clicking save button*/
-
 {
 
-if($_POST['select_type']=='term_checkbox')
+  if($_POST['select_type']=='term_checkbox')
+  {
+	  $rgf=1;
+  }
+  else
+  {
+	  $rgf="";
+  }
 
-{
-
-	$_POST['field_registration']=1;
-
-}
+  if($_POST['field_ordering']=="")
+  {
+	$_POST['field_ordering']=$totalrows;
+  }
 
 $usergroups = implode(",",$_POST['field_user_groups']);	
 
-$qry = "insert into $upb_fields values('','".$_POST['select_type']."','".$_POST['field_name']."','".$_POST['field_value']."','".$_POST['field_class']."','".$_POST['field_maxLenght']."','".$_POST['field_cols']."','".$_POST['field_rows']."','".$_POST['field_Options']."','".$_POST['field_Des']."','','','1','".$_POST['field_ordering']."','".$usergroups."','')";
+$qry = "insert into $upb_fields values('','".$_POST['select_type']."','".$_POST['field_name']."','".$_POST['field_value']."','".$_POST['field_class']."','".$_POST['field_maxLenght']."','".$_POST['field_cols']."','".$_POST['field_rows']."','".$_POST['field_Options']."','".$_POST['field_Des']."','','','1','".$_POST['field_ordering']."','".$usergroups."','".$rgf."')";
 
 
 
@@ -507,6 +513,7 @@ ul.chosen-choices li.search-field input {
 	width: auto !important;
 
 }
+#role_message,.options_message{ color:red;}
 
 </style>
 
@@ -596,7 +603,7 @@ $num_rowscount =$wpdb->get_var($qrycount);
 
           <label for="field_user_groups">Assign User Role(s)</label>
 
-          <select data-placeholder="Choose User Role..." name="field_user_groups[]" id="field_user_groups[]" class="chosen-select" multiple="multiple" tabindex="4" required>
+          <select data-placeholder="Choose User Role..." name="field_user_groups[]" id="field_user_groups" class="chosen-select" multiple="multiple" tabindex="4" required>
 
             <option value=""></option>
 
@@ -617,6 +624,7 @@ foreach($roles as $key=>$role)
 ?>
 
           </select>
+          <div id="role_message"></div>
 
         </p>
 
@@ -675,6 +683,7 @@ foreach($roles as $key=>$role)
           <label for="field_Options">Options <small style="float:left;">(value seprated by comma ",")</small></label>
 
           <textarea type="text" name="field_Options" id="field_Options" cols="25" rows="5"></textarea>
+          <div class="options_message"></div>
 
         </p>
 
@@ -690,15 +699,13 @@ foreach($roles as $key=>$role)
 
           <label for="field_ordering">Ordering</label>
 
-          <select name="field_ordering" id="field_ordering" required>
+          <select name="field_ordering" id="field_ordering">
 
             <option value="">Select Ordering</option>
 
             <?php 
 
-	  $qrytotalrows = "SELECT count(*) FROM $upb_fields";
-
-	  $totalrows = $wpdb->get_var($qrytotalrows) + 1;
+	 
 
 	  for($i=1;$i<=$totalrows;$i++)
 
@@ -714,7 +721,7 @@ foreach($roles as $key=>$role)
 
         <p id="submit_field">
 
-          <input type="submit" id="field_submit" name="field_submit" class="button-primary" value="Save" style="width:auto;" />
+          <input type="submit" id="field_submit" name="field_submit" class="button-primary" value="Save" style="width:auto;" onClick=" return validation()"/>
 
         </p>
 
@@ -757,6 +764,42 @@ foreach($roles as $key=>$role)
   <!--AJAX for checking if the custom field already exists-->
 
 <script type="text/javascript">
+function validation()
+{
+		a=jQuery('#field_user_groups').val();
+		b = jQuery('#select_type').val();
+
+		if(a==null)
+		{
+			jQuery('#role_message').html('At least one user role needs to be assigned.');	
+		}
+		else
+		{
+			jQuery('#role_message').html('');
+		}
+		
+		if(b=='select' || b=='radio' || b=='checkbox')
+		{
+			c = jQuery('#field_Options').val();
+			if(c=='')
+			{
+				jQuery('.options_message').html('Please provide at least one value for the field.');	
+			}
+			else
+			{
+				jQuery('.options_message').html('');	
+			}
+		}
+		if(jQuery('#role_message').html()=='' && jQuery('.options_message').html()=='')
+		{
+			return true;
+		}
+		else
+		{
+			return false;	
+		}
+		
+}
 
   function check() { //user types username on inputfiled
 

@@ -10,7 +10,7 @@
 
 	/*This controls visibility for admin bar in the plugin settings*/
 	if ( is_user_logged_in() ) {
-	switch ($current_user->roles[0])
+	switch (@$current_user->roles[0])
 	{
 
 		case "administrator":

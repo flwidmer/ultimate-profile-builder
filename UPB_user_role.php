@@ -198,7 +198,7 @@ $count = $wpdb->get_var($qry);
 
         <div class="role-display-none" style="display:none; float:left; color:red; width:100%;">Please Enter Valid Role Name (only a-z,A-Z,0-9 allowed)</div>
 
-          <div class="error_message" style="float:left; color:red; width:100%;"><?php echo $error; ?></div>
+          <div class="error_message" style="float:left; color:red; width:100%;"><?php if(isset($error)) echo $error; ?></div>
 
         <div class="add-role-submit" style="margin-top:10px;">
 

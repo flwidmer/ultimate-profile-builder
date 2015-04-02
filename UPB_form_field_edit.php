@@ -45,7 +45,7 @@ ul.chosen-choices li.search-field input {
 	width: auto !important;
 
 }
-
+#role_message,.options_message{ color:red;}
 </style>
 
 <script> 
@@ -620,7 +620,7 @@ if(isset($_POST['id'])) //For deleting the existing custom field
 
           <label for="field_user_groups">Select User group</label>
 
-          <select data-placeholder="Choose User Group..." name="field_user_groups[]" id="field_user_groups[]" class="chosen-select" multiple="multiple" tabindex="4" required>
+          <select data-placeholder="Choose User Group..." name="field_user_groups[]" id="field_user_groups" class="chosen-select" multiple="multiple" tabindex="4" required>
 
             <option value=""></option>
 
@@ -637,6 +637,7 @@ foreach($roles as $key=>$role)
             <?php } ?>
 
           </select>
+          <div id="role_message"></div>
 
         </p>
 
@@ -697,7 +698,7 @@ foreach($roles as $key=>$role)
           <label for="field_Options">Options <small style="float:left;">(value seprated by comma ",")</small></label>
 
           <textarea type="text" name="field_Options" id="field_Options" cols="25" rows="5"><?php echo $row->Option_Value;?></textarea>
-
+ 		<div class="options_message"></div>
         </p>
 
         <p id="desfield">
@@ -740,7 +741,7 @@ foreach($roles as $key=>$role)
 
         <p id="submit_field">
 
-          <input type="submit" id="field_submit" name="field_submit" class="button-primary" value="Update Field" style="width:auto;" />
+          <input type="submit" id="field_submit" name="field_submit" class="button-primary" value="Update Field" style="width:auto;" onClick=" return validation()" />
 
         </p>
 
@@ -793,7 +794,42 @@ getfields("<?php echo $str;?>");
   <!--AJAX for checking if the custom field already exists-->
 
 <script type="text/javascript">
+function validation()
+{
+		a=jQuery('#field_user_groups').val();
+		b = jQuery('#select_type').val();
 
+		if(a==null)
+		{
+			jQuery('#role_message').html('At least one user role needs to be assigned.');	
+		}
+		else
+		{
+			jQuery('#role_message').html('');
+		}
+		
+		if(b=='select' || b=='radio' || b=='checkbox')
+		{
+			c = jQuery('#field_Options').val();
+			if(c=='')
+			{
+				jQuery('.options_message').html('Please provide at least one value for the field.');	
+			}
+			else
+			{
+				jQuery('.options_message').html('');	
+			}
+		}
+		if(jQuery('#role_message').html()=='' && jQuery('.options_message').html()=='')
+		{
+			return true;
+		}
+		else
+		{
+			return false;	
+		}
+		
+}
   function check() { //user types username on inputfiled
 
   	 //get the string typed by user
