@@ -4,6 +4,23 @@
 	$sign = strpos($pageURL,'?')?'&':'?';
 	global $wpdb;
 	$upb_fields =$wpdb->prefix."upb_fields";
+	if (!function_exists('checkfieldname')) {
+	function checkfieldname($fieldname,$value) //Checks and hides empty fields
+	{
+		global $wpdb;
+		$upb_option=$wpdb->prefix."upb_option";
+		$select="select value from $upb_option where fieldname='".$fieldname."'";
+		$data = $wpdb->get_var($select);
+		if($data==$value)
+		{
+			return true;	
+		}
+		else
+		{
+			return	false;	
+		}
+	}
+	}
 	
 /*Controls login page options based on user state*/
 	extract($_REQUEST);
@@ -310,6 +327,7 @@ else {
 </script>
   <div id="main-upb-form">
   <form method="post" action="" id="your-profile" enctype="multipart/form-data" onsubmit="javascript: return validateyour_profile();">
+  <?php if (checkfieldname("upb_usernameshowhide","yes")==true): ?>
     <div class="formtable">
       <div  class="lable-text">
         <label for="user_login">Username <br/>
@@ -319,6 +337,8 @@ else {
         <input type="text" class="regular-text" disabled="disabled" value="<?php echo $user_login; ?>" id="user_login" name="user_login">
       </div>
     </div>
+    <?php endif; ?>
+    <?php if (checkfieldname("upb_emailshowhide","yes")==true): ?>
     <div class="formtable">
       <div  class="lable-text">
         <label for="email">E-mail<br/>
@@ -328,6 +348,7 @@ else {
         <input type="text" class="regular-text" disabled="disabled" value="<?php echo $user_e_mail; ?>" id="email" name="email">
       </div>
     </div>
+    <?php endif; ?>
     <div class="formtable">
       <div class="lable-text">
         <label for="user_password">Password<br>
@@ -365,6 +386,7 @@ else {
         <input type="text" class="regular-text" value="<?php echo $user_lastname; ?>" id="last_name" name="last_name">
       </div>
     </div>
+    <?php if (checkfieldname("upb_nicknameshowhide","yes")==true): ?>
     <div class="formtable">
       <div  class="lable-text">
         <label for="nickname">Nickname</label>
@@ -373,6 +395,8 @@ else {
         <input type="text" class="regular-text" value="<?php echo $nickname; ?>" id="nickname" name="nickname">
       </div>
     </div>
+    <?php endif; ?>
+     <?php if (checkfieldname("upb_websiteshowhide","yes")==true): ?>
     <div class="formtable">
       <div  class="lable-text">
         <label for="url">Website</label>
@@ -381,6 +405,8 @@ else {
         <input type="text" class="regular-text code" value="<?php echo $user_url; ?>" id="user_url" name="user_url">
       </div>
     </div>
+    <?php endif; ?>
+     <?php if (checkfieldname("upb_aimshowhide","yes")==true): ?>
     <div class="formtable">
       <div  class="lable-text">
         <label for="aim">AIM</label>
@@ -389,6 +415,8 @@ else {
         <input type="text" class="regular-text" value="<?php echo get_user_meta($current_ID, 'aim', true); ?>" id="aim" name="aim">
       </div>
     </div>
+    <?php endif; ?>
+     <?php if (checkfieldname("upb_yahooimshowhide","yes")==true): ?>
     <div class="formtable">
       <div  class="lable-text">
         <label for="yim">Yahoo IM</label>
@@ -397,6 +425,8 @@ else {
         <input type="text" class="regular-text" value="<?php echo get_user_meta($current_ID, 'yim', true); ?>" id="yim" name="yim">
       </div>
     </div>
+    <?php endif; ?>
+    <?php if (checkfieldname("upb_jabbergoogletalkshowhide","yes")==true): ?>
     <div class="formtable">
       <div  class="lable-text">
         <label for="jabber">Jabber / Google Talk</label>
@@ -405,6 +435,8 @@ else {
         <input type="text" class="regular-text" value="<?php echo get_user_meta($current_ID,'jabber', true); ?>" id="jabber" name="jabber">
       </div>
     </div>
+    <?php endif; ?>
+    
     <div class="formtable">
       <div  class="lable-text">
         <label for="avtar_image">Display picture publicly as</label>
@@ -413,6 +445,7 @@ else {
         <input type="file" onChange="return ValidateFileUpload()" class="regular-text" value="" id="avtar_image" name="avtar_image">
       </div>
     </div>
+    <?php if (checkfieldname("upb_biographicalinfoshowhide","yes")==true): ?>
     <div class="formtable">
       <div  class="lable-text">
         <label for="description">About Me</label>
@@ -421,6 +454,7 @@ else {
         <textarea cols="30" rows="5" id="description" name="description"><?php echo $user_description; ?></textarea>
       </div>
     </div>
+    <?php endif; ?>
     <?php 
 	/*HTML for Showing custom fields on front end*/
 						$current_user_role = @$current_user->roles[0];
@@ -463,7 +497,7 @@ else {
 if($row1->Type=='paragraph')
 		 {?>
       <div class="formtable upb_paragraph">
-        <p name="<?php echo $key;?>" class="<?php echo $row1->Class;?>"><?php echo $row1->Value;?></p>
+        <p name="<?php echo $key;?>" class="<?php echo $row1->Class;?>"><?php echo $row1->Option_Value;?></p>
       </div>
       <?php }
 if($row1->Type=='DatePicker')

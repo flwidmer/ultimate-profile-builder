@@ -223,57 +223,35 @@ $column = $value;
 
 
 if($column==1)
-
 {
-
-  $width = 80;
-
+  $width = 90;
   $marginright = '5px';
-
   $marginleft = '5px';
-
+  $padding = '3%';
 }
-
-
 
 if($column==2)
-
 {
-
-  $width = 40;
-
+  $width = 41;
   $marginright = '5px';
-
   $marginleft = '5px';
-
+  $padding = '3%';
 }
-
-
 
 if($column==3)
-
 {
-
-	$width = 25;
-
+	$width = 24;
 	$marginright = '5px';
-
 	$marginleft = '5px';
-
+	$padding = '3%';
 }
 
-
-
 if($column==4)
-
 {
-
-  $width = 17;
-
+  $width = 16;
   $marginright = '5px';
-
   $marginleft = '5px';	
-
+  $padding = '3%';
 }
 
 
@@ -344,7 +322,7 @@ foreach($blogusers as $row)
 
 
 
-<div class="box-view" id="userview" style="width:<?php echo $width.'%';?>; margin-right:<?php echo $marginright; ?>;margin-left:<?php echo $marginleft;?>" align="center">
+<div class="box-view" id="userview" style="width:<?php echo $width.'%';?>; margin-right:<?php echo $marginright; ?>;margin-left:<?php echo $marginleft;?>; padding:<?php echo $padding;?>;" align="center">
 
 <!-- show first name and last name if first name empty then show user name ----->
 

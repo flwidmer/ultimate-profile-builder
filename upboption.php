@@ -666,7 +666,7 @@ line-height: 25px;">Custom Text for Registration Page:</div>
 
             <font id="generalSettingFont">Maximum number of profiles on a single page: </font>
 
-            <select name="max_results" id="max_results1" class="wppb_general_settings2" onchange="javascript:if(this.selectedIndex < 4){ document.getElementById('box_width1').selectedIndex = this.selectedIndex; }">
+            <select name="max_results" id="max_results1" class="wppb_general_settings2">
 
               <?php
 
@@ -758,7 +758,7 @@ function checkit(val)
 
             <div id="div_box_width" style="display:<?php echo (checkfieldname("upb_profile_list_view","box") == true)? "block" : "none"; ?>;"> <font id="generalSettingFont">Number of columns in box view:</font>
 
-              <select name="box_width" id="box_width1" class="wppb_general_settings2" onchange="javascript:if(this.selectedIndex < 4){ document.getElementById('max_results1').selectedIndex = this.selectedIndex; }">
+              <select name="box_width" id="box_width1" class="wppb_general_settings2">
 
                 <option value="1" <?php if (checkfieldname("upb_profile_list_column","1")==true){ echo "selected";}?> >1</option>
 

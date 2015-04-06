@@ -720,6 +720,17 @@ if($row1->Type=='term_checkbox')
 			}
         });
 		/*file addon end */
+		
+		jQuery('.upb_date').each(function (index, element) { //Validation for number type custom field
+            var date = jQuery(this).children('input').val();
+			var datepattern = /^\d{4}-\d{2}-\d{2}$/;
+ 			 is_date = date.match(datepattern);
+            if (is_date == null && date !="") {
+                jQuery(this).children('.custom_error').html('<?php _e('Please enter a valid date(yyyy-mm-dd).',$textdomain);?>');
+                jQuery(this).children('.custom_error').show();
+            }
+        });
+		
         jQuery('.upb_number').each(function (index, element) { //Validation for number type custom field
             var number = jQuery(this).children('input').val();
             var isnumber = jQuery.isNumeric(number);

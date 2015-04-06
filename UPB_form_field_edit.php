@@ -389,14 +389,17 @@ function getfields(a)
 	
 
 	if(a=='paragraph')
-
 	{
-
 		jQuery('.info').html('This Paragraph field is working only for "Registration" and "Edit Profile" page.');
-
+		jQuery('#optionsfield label').html('Paragraph Text');
 	 	jQuery('.info').show();
-
+		jQuery('#valuefield').hide();
+		jQuery('#optionsfield').show();
 	}
+	if(a != 'paragraph')
+	  {
+		  jQuery('#optionsfield label').html('Options: <small style="float:left;">(value seprated by comma ",")</small>');	
+	  }
 
 	
 
@@ -468,7 +471,7 @@ $wpdb->query($qry);
 
 	$unique = "";
 
-	update_user_meta( $current_ID, $meta_key, $meta_value, $unique );
+	add_user_meta( $current_ID, $meta_key, $meta_value, $unique );
 
 	header("location:admin.php?page=UltimatePB_Fields");
 

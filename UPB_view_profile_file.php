@@ -290,8 +290,6 @@
 
         <?php endif; ?>
 
-        <br>
-
         <?php if (checkfieldname("upb_aimshowhide","yes")==true && (get_user_meta($current_id,'aim', true) !="")) : ?>
 
         <div class="user-aim-info"> AIM:
