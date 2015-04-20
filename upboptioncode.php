@@ -3,6 +3,9 @@
 	$selectedTabId = 1;
 	if(isset($_REQUEST['submit']))
 	{
+		$retrieved_nonce = $_REQUEST['_wpnonce'];
+		if (!wp_verify_nonce($retrieved_nonce, 'save_upb_general_setting' ) ) die( 'Failed security check' );
+
 		$selectedTabId = 5;
 		if(isset($_REQUEST['recaptcha']) && $_REQUEST['recaptcha']=="yes")
 		{
@@ -77,6 +80,9 @@
 	}
 	if(isset($_REQUEST['submit1']))
 	{
+		$retrieved_nonce = $_REQUEST['_wpnonce'];
+		if (!wp_verify_nonce($retrieved_nonce, 'save_upb_adminbar_setting' ) ) die( 'Failed security check' );
+
 		$selectedTabId = 3;
 		if(isset($_REQUEST['adminshowhide']) && $_REQUEST['adminshowhide']=="yes")
 		{
@@ -122,6 +128,9 @@
 	}
 	if(isset($_REQUEST['RegCustomSubmit']))
 	{
+		$retrieved_nonce = $_REQUEST['_wpnonce'];
+		if (!wp_verify_nonce($retrieved_nonce, 'save_upb_visibility_setting' ) ) die( 'Failed security check' );
+
 		$selectedTabId = 4;	
 		if(!isset($_REQUEST['usernameshowhide']) || $_REQUEST['usernameshowhide']=="") $_REQUEST['usernameshowhide']='no';
 		if(!isset($_REQUEST['nicknameshowhide']) || $_REQUEST['nicknameshowhide']=="") $_REQUEST['nicknameshowhide']='no';
@@ -146,6 +155,9 @@
 	
 	if(isset($_REQUEST['personalization']))
 	{
+		$retrieved_nonce = $_REQUEST['_wpnonce'];
+		if (!wp_verify_nonce($retrieved_nonce, 'save_upb_personalization_setting' ) ) die( 'Failed security check' );
+
 		$selectedTabId = 2;	
 		mytable_add_option( 'Registration_Custom_Text', $_REQUEST['RegCustomText']);
 		

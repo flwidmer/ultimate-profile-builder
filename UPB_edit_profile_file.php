@@ -67,6 +67,9 @@
 			$EPSubmit = $_REQUEST['EPSubmit'];
 			if(isset($EPSubmit))/*Saves profile after editing on front end*/
 			{
+				$retrieved_nonce = $_REQUEST['_wpnonce'];
+				if (!wp_verify_nonce($retrieved_nonce, 'upb_edit_profile' ) ) die( 'Failed security check' );
+
 				$current_user = wp_get_current_user();
 				$current_ID = $current_user->ID;
 				if(isset($_POST['current_ID']))
@@ -199,27 +202,34 @@
 				}
 ?>
 <!--Shows user options immediately after submitting changes to profile-->
-<div id="upb-form" align="center" >
-<div class="profile-updated-succ"> Your profile has been updated successfully.</div>
-<div id="main-upb-form">
-  <div align="center"  class="updated-successfully-upb-device" >
-    <div class="all-log-device margin-left2 updated-successfully"><a href="javascript:void(0);" onclick="javascript:history.back();">
-      <div class="UltimatePB-Button"> Go back to edit-profile </div>
-      </a> &nbsp; <a href="<?php echo $pageURL.$sign; ?>login4=1" title="Home-Page">
-      <div class="UltimatePB-Button"> Go back to site </div>
-      </a> </div>
-  </div>
-</div>
+<div id="UPB-Standard-Form">
+  <div id="UPB-Standard-Form-entry-content">
+   <div class="UPB-Standard-Form-main-upb-form">
+  <div class="already-logged">
+    <div class="You-are-already-logged-in">
+    <h3>Your profile has been updated successfully.</h3>
+    </div>
+    <div class="UPB-Button-input">
+       <a class="UPB-Button" href="javascript:void(0);" onclick="javascript:history.back();">Go back to edit-profile</a>
+       <a class="UPB-Button" href="<?php echo $pageURL.$sign; ?>login4=1" title="Home-Page">Go back to site</a>
+       <div class="clear"></div>
+   </div>
+   <div class="clear"></div>
+   </div>
+   </div>
+  <div class="clear"></div>
+  </div><!-----------UPB-Standard-Form-entry-content-------->
+   <div class="clear"></div>
+</div><!---------UPB-Standard-Form--------->
 <?php
 			}
 			else /*Start edit profile view on the front end*/
 			{
 ?>
-<div id="upb-form" class="wrap edit-profile-top-area-device">
-  <h2> Edit Profile </h2>
-  <div class="edit-info">
-    <div class="upb-name"> Basic Information </div>
-    <div class="upb-button"> <a href="javascript:void(0);" onclick="javascript:history.back();"> Cancel and go back </a> </div>
+<div id="UPB-Standard-Form">
+  <h2 class="UPB-Standard-form-second-tittle"> Edit Profile </h2>
+  <div id="top-entry-header">Basic Information
+  <a class="cancel-and-go" href="javascript:void(0);" onclick="javascript:history.back();"> Cancel and go back </a>
   </div>
   <script type="text/javascript">
     function ValidateFileUpload() {
@@ -325,14 +335,15 @@ else {
           return true;
     }
 </script>
-  <div id="main-upb-form">
-  <form method="post" action="" id="your-profile" enctype="multipart/form-data" onsubmit="javascript: return validateyour_profile();">
+<form method="post" action="" id="your-profile" class="UPB-login-form" enctype="multipart/form-data" onsubmit="javascript: return validateyour_profile();">
+  <div id="UPB-Standard-Form-entry-content">
+   <div class="UPB-Standard-Form-main-upb-form">
+      <div class="login-form">
+       
   <?php if (checkfieldname("upb_usernameshowhide","yes")==true): ?>
     <div class="formtable">
-      <div  class="lable-text">
-        <label for="user_login">Username <br/>
-          <span class="edit-info">This field cannot be edited</span></label>
-      </div>
+      <label for="user_login">Username <br/>
+      <span class="edit-info">This field cannot be edited</span></label>
       <div class="input-box">
         <input type="text" class="regular-text" disabled="disabled" value="<?php echo $user_login; ?>" id="user_login" name="user_login">
       </div>
@@ -340,20 +351,15 @@ else {
     <?php endif; ?>
     <?php if (checkfieldname("upb_emailshowhide","yes")==true): ?>
     <div class="formtable">
-      <div  class="lable-text">
-        <label for="email">E-mail<br/>
+          <label for="email">E-mail<br/>
           <span class="edit-info">This field cannot be edited</span></label>
-      </div>
-      <div class="input-box">
+     <div class="input-box">
         <input type="text" class="regular-text" disabled="disabled" value="<?php echo $user_e_mail; ?>" id="email" name="email">
       </div>
     </div>
     <?php endif; ?>
     <div class="formtable">
-      <div class="lable-text">
-        <label for="user_password">Password<br>
-        </label>
-      </div>
+        <label for="user_password">Password</label>
       <div class="input-box">
         <input id="inputPassword" name="inputPassword" type="password" onfocus="javascript:document.getElementById('user_confirm_password').value = '';" />
         <div id="complexity" class="default" style="display:none;"></div>
@@ -361,97 +367,76 @@ else {
       </div>
     </div>
     <div class="formtable">
-      <div class="lable-text">
-        <label for="user_confirm_password">Confirm Password<br>
-        </label>
-      </div>
-      <div class="input-box upbconfirm_pass">
+        <label for="user_confirm_password">Confirm Password</label>
+    <div class="input-box upbconfirm_pass">
         <input id="user_confirm_password" name="pass2" type="password"/>
         <div class="reg_frontErr custom_error" style="display: none;"></div>
       </div>
     </div>
     <div class="formtable">
-      <div  class="lable-text">
-        <label for="first_name">First Name</label>
-      </div>
-      <div class="input-box">
-        <input type="text" class="regular-text" value="<?php echo $user_firstname; ?>" id="first_name" name="first_name">
+       <label for="first_name">First Name</label>
+    <div class="input-box">
+        <input type="text" value="<?php echo $user_firstname; ?>" id="first_name" name="first_name">
       </div>
     </div>
     <div class="formtable">
-      <div  class="lable-text">
         <label for="last_name">Last Name</label>
-      </div>
-      <div class="input-box">
-        <input type="text" class="regular-text" value="<?php echo $user_lastname; ?>" id="last_name" name="last_name">
+    <div class="input-box">
+        <input type="text" value="<?php echo $user_lastname; ?>" id="last_name" name="last_name">
       </div>
     </div>
     <?php if (checkfieldname("upb_nicknameshowhide","yes")==true): ?>
     <div class="formtable">
-      <div  class="lable-text">
-        <label for="nickname">Nickname</label>
-      </div>
+      <label for="nickname">Nickname</label>
       <div class="input-box">
-        <input type="text" class="regular-text" value="<?php echo $nickname; ?>" id="nickname" name="nickname">
+        <input type="text" value="<?php echo $nickname; ?>" id="nickname" name="nickname">
       </div>
     </div>
     <?php endif; ?>
      <?php if (checkfieldname("upb_websiteshowhide","yes")==true): ?>
     <div class="formtable">
-      <div  class="lable-text">
         <label for="url">Website</label>
-      </div>
       <div class="input-box">
-        <input type="text" class="regular-text code" value="<?php echo $user_url; ?>" id="user_url" name="user_url">
+        <input type="text" value="<?php echo $user_url; ?>" id="user_url" name="user_url">
       </div>
     </div>
     <?php endif; ?>
      <?php if (checkfieldname("upb_aimshowhide","yes")==true): ?>
     <div class="formtable">
-      <div  class="lable-text">
         <label for="aim">AIM</label>
-      </div>
       <div class="input-box">
-        <input type="text" class="regular-text" value="<?php echo get_user_meta($current_ID, 'aim', true); ?>" id="aim" name="aim">
+        <input type="text" value="<?php echo get_user_meta($current_ID, 'aim', true); ?>" id="aim" name="aim">
       </div>
     </div>
     <?php endif; ?>
      <?php if (checkfieldname("upb_yahooimshowhide","yes")==true): ?>
     <div class="formtable">
-      <div  class="lable-text">
         <label for="yim">Yahoo IM</label>
-      </div>
       <div class="input-box">
-        <input type="text" class="regular-text" value="<?php echo get_user_meta($current_ID, 'yim', true); ?>" id="yim" name="yim">
+        <input type="text" value="<?php echo get_user_meta($current_ID, 'yim', true); ?>" id="yim" name="yim">
       </div>
     </div>
     <?php endif; ?>
     <?php if (checkfieldname("upb_jabbergoogletalkshowhide","yes")==true): ?>
     <div class="formtable">
-      <div  class="lable-text">
         <label for="jabber">Jabber / Google Talk</label>
-      </div>
       <div class="input-box">
-        <input type="text" class="regular-text" value="<?php echo get_user_meta($current_ID,'jabber', true); ?>" id="jabber" name="jabber">
+        <input type="text" value="<?php echo get_user_meta($current_ID,'jabber', true); ?>" id="jabber" name="jabber">
       </div>
     </div>
     <?php endif; ?>
     
     <div class="formtable">
-      <div  class="lable-text">
         <label for="avtar_image">Display picture publicly as</label>
-      </div>
       <div class="input-box">
-        <input type="file" onChange="return ValidateFileUpload()" class="regular-text" value="" id="avtar_image" name="avtar_image">
+        <input type="file" onChange="return ValidateFileUpload()" value="" id="avtar_image" name="avtar_image">
       </div>
     </div>
     <?php if (checkfieldname("upb_biographicalinfoshowhide","yes")==true): ?>
     <div class="formtable">
-      <div  class="lable-text">
         <label for="description">About Me</label>
-      </div>
       <div class="input-box">
-        <textarea cols="30" rows="5" id="description" name="description"><?php echo $user_description; ?></textarea>
+        <textarea cols="" rows="" id="description" name="description"><?php echo $user_description; ?></textarea>
       </div>
     </div>
     <?php endif; ?>
@@ -462,9 +447,10 @@ else {
 						$reg1 = $wpdb->get_results($qry1);
 						if(!empty($reg1)):
 							?>
-    <div class="upb-name UPB-Additional-Information"> Additional Information </div>
-    <div class="main-edit-profile edit-profile-device">
-      <?php 
+                       <div id="UPB-Additional-Information">
+                        <h2 class="additional-information-heading"> Additional Information </h2>
+                        <div class="main-edit-profile edit-profile-device">
+                        <?php 
 							 foreach($reg1 as $row1)
 							 {
 								$key = str_replace(" ","_",$row1->Name);
@@ -480,9 +466,7 @@ else {
 								 if($row1->Type=='text')
 								 {?>
       <div class="formtable">
-        <div  class="lable-text">
           <label for="<?php echo $key; ?>"><?php echo $row1->Name;?></label>
-        </div>
         <div class="input-box">
           <input type="text" class="regular-text <?php echo $row1->Class;?>" maxlength="<?php echo $row1->Max_Length;?>"  value="<?php echo $value;?>" id="<?php echo $key;  ?>" name="<?php echo $key;  ?>" <?php if($row1->Readonly==1)echo 'readonly';?> <?php if($row1->Require==1)echo 'required';?>>
         </div>
@@ -490,22 +474,20 @@ else {
       <?php }
 		 if($row1->Type=='heading')
 		 {?>
-      <div class="formtable upb_heading">
-        <h1 name="<?php echo $key;?>" class="<?php echo $row1->Class;?>"><?php echo $row1->Value;?></h1>
+      <div class="information-heading formtable upb_heading">
+        <h3 name="<?php echo $key;?>" class="<?php echo $row1->Class;?>"><?php echo $row1->Value;?></h3>
       </div>
       <?php }
 if($row1->Type=='paragraph')
 		 {?>
-      <div class="formtable upb_paragraph">
+      <div class="formtable paragraph">
         <p name="<?php echo $key;?>" class="<?php echo $row1->Class;?>"><?php echo $row1->Option_Value;?></p>
       </div>
       <?php }
 if($row1->Type=='DatePicker')
 		 {?>
       <div class="formtable">
-        <div class="lable-text">
           <label for="<?php echo $key;?>"><?php echo $row1->Name;?></label>
-        </div>
         <div class="input-box">
           <input type="text" class="MyDate regular-text <?php echo $row1->Class;?>" maxlength="<?php echo $row1->Max_Length;?>" value="<?php echo $value;?>" id="<?php echo $key;?>" name="<?php echo $key;?>" <?php if($row1->Readonly==1)echo 'readonly';?> <?php if($row1->Require==1)echo 'required';?>>
         </div>
@@ -514,11 +496,9 @@ if($row1->Type=='DatePicker')
 if($row1->Type=='email')
 		 {?>
       <div class="formtable">
-        <div class="lable-text">
           <label for="<?php echo $key;?>"><?php echo $row1->Name;?></label>
-        </div>
         <div class="input-box upb_email">
-          <input type="text" class="regular-text <?php echo $row1->Class;?>" maxlength="<?php echo $row1->Max_Length;?>" value="<?php echo $value;?>" id="<?php echo $key;?>" name="<?php echo $key;?>" <?php if($row1->Readonly==1)echo 'readonly';?> <?php if($row1->Require==1)echo 'required';?>>
+          <input type="text" <?php echo $row1->Class;?> maxlength="<?php echo $row1->Max_Length;?>" value="<?php echo $value;?>" id="<?php echo $key;?>" name="<?php echo $key;?>" <?php if($row1->Readonly==1)echo 'readonly';?> <?php if($row1->Require==1)echo 'required';?>>
           <div class="reg_frontErr custom_error" style="display:none;"></div>
         </div>
       </div>
@@ -527,10 +507,8 @@ if($row1->Type=='email')
 if($row1->Type=='number')
 		 {?>
       <div class="formtable">
-        <div class="lable-text">
-          <label for="<?php echo $key;?>"><?php echo $row1->Name;?></label>
-        </div>
-        <div class="input-box upb_number">
+        <label for="<?php echo $key;?>"><?php echo $row1->Name;?></label>
+      <div class="input-box upb_number">
           <input type="text" class="upb_number regular-text <?php echo $row1->Class;?>" maxlength="<?php echo $row1->Max_Length;?>" value="<?php echo $value;?>" id="<?php echo $key;?>" name="<?php echo $key;?>" <?php if($row1->Readonly==1)echo 'readonly';?> <?php if($row1->Require==1)echo 'required';?>>
           <div class="reg_frontErr custom_error" style="display:none;"></div>
         </div>
@@ -539,9 +517,7 @@ if($row1->Type=='number')
 								  if($row1->Type=='textarea')
 								 {?>
       <div class="formtable">
-        <div  class="lable-text">
           <label for="<?php echo $key;  ?>"><?php echo $row1->Name;?></label>
-        </div>
         <div class="input-box">
           <textarea  class="regular-text <?php echo $row1->Class;?>" maxlength="<?php echo $row1->Max_Length;?>" cols="<?php echo $row1->Cols;  ?>" rows="<?php echo $row1->Rows;  ?>" id="<?php echo $key;  ?>" name="<?php echo $key;  ?>" <?php if($row1->Readonly==1)echo 'readonly';?> <?php if($row1->Require==1)echo 'required';?>><?php echo $value; ?></textarea>
         </div>
@@ -550,34 +526,31 @@ if($row1->Type=='number')
 								 if($row1->Type=='radio')
 								 {?>
       <div class="formtable">
-        <div  class="lable-text">
           <label for="<?php echo $key;  ?>"><?php echo $row1->Name;?></label>
-        </div>
-        <div class="input-box">
+        <div class="radio">
           <?php 
 									$arr_radio = explode(',',$row1->Option_Value);
 									foreach($arr_radio as $radio)
 									{?>
-          <div class="radio_option"><?php echo $radio; ?></div>
-          <input type="radio" class="regular-text <?php echo $row1->Class;?>" value="<?php echo $radio;?>" id="<?php echo $key;  ?>" style="width:50px;" name="<?php echo $key;  ?>" <?php if($value == $radio)echo 'checked' ?> <?php if($row1->Readonly==1)echo 'disabled';?> >
+          <?php echo $radio; ?>
+          <input type="radio" <?php echo $row1->Class;?> value="<?php echo $radio;?>" id="<?php echo $key;  ?>" name="<?php echo $key;  ?>" <?php if($value == $radio)echo 'checked' ?> <?php if($row1->Readonly==1)echo 'disabled';?> >
           <?php }?>
         </div>
+        <div class="clear"></div>
       </div>
       <?php }
 								  if($row1->Type=='checkbox')
 								 {?>
       <div class="formtable">
-        <div  class="lable-text">
           <label for="<?php echo $key;  ?>"><?php echo $row1->Name;?></label>
-        </div>
-        <div class="input-box">
+        <div class="radio">
           <?php 
 									$arr_radio = explode(',',$row1->Option_Value);
 									$radio_count = 1;
 									foreach($arr_radio as $radio)
 									{?> 
-          <div style="float:left;"><?php echo $radio; ?> </div>
-          <input type="checkbox" class="regular-text <?php echo $row1->Class;?>" value="<?php echo $radio;?>" id="<?php echo $key;  ?>" name="<?php echo $row1->Name.'[]';?>" 
+          <?php echo $radio; ?>
+          <input type="checkbox" class="<?php echo $row1->Class;?>" value="<?php echo $radio;?>" id="<?php echo $key;  ?>" name="<?php echo $row1->Name.'[]';?>" 
 										<?php 
 										if(isset($arr_value) && $arr_value!="")
 										{
@@ -595,15 +568,14 @@ if($row1->Type=='number')
 										<?php if($row1->Readonly==1)echo 'disabled';?>>
           <?php $radio_count++; }?>
         </div>
+        <div class="clear"></div>
       </div>
       <?php }
 								 if($row1->Type=='file')
 								 {?>
       <div class="formtable">
-        <div  class="lable-text">
-          <label for="<?php echo $key;  ?>"><?php echo $row1->Name;?></label>
-        </div>
-        <div class="input-box">
+        <label for="<?php echo $key;  ?>"><?php echo $row1->Name;?></label>
+       <div class="input-box">
           <input type="file" class="regular-text <?php echo $row1->Class;?>" value="" id="<?php echo $key;  ?>" name="<?php echo $key;  ?>">
         </div>
       </div>
@@ -611,11 +583,10 @@ if($row1->Type=='number')
 								 if($row1->Type=='select')
 								 {?>
       <div class="formtable">
-        <div  class="lable-text">
           <label for="<?php echo $key;  ?>"><?php echo $row1->Name;?></label>
-        </div>
+       
         <div class="input-box">
-          <select class="regular-text <?php echo $row1->Class;?>" id="<?php echo $key;  ?>" name="<?php echo $key;  ?>" <?php if($row1->Readonly==1)echo 'disabled';?> <?php if($row1->Require==1)echo 'required';?>>
+          <select class="<?php echo $row1->Class;?>" id="<?php echo $key;  ?>" name="<?php echo $key;  ?>" <?php if($row1->Readonly==1)echo 'disabled';?> <?php if($row1->Require==1)echo 'required';?>>
             <?php
 									$arr = explode(',',$row1->Option_Value);
 									foreach($arr as $ar)
@@ -632,18 +603,30 @@ if($row1->Type=='number')
 							 }
 	?>
     </div>
+                      </div><!------------UPB-Additional-Information--------->
     <?php 
 	endif; 
 	/*HTML for custom fields ends */
 	?>
-    <div class="customupberror" style="display:none"></div>
-    <div class="UltimatePB-Button-inp" align="center">
-      <input type="hidden" name="current_ID" id="current_ID" value="<?php echo $current_ID; ?>" />
-      <input type="submit" value="Save" class="UltimatePB-Button" id="EPSubmit" name="EPSubmit">
+   
+  
+      </div>
+     <div class="clear"></div>
+  </div><!----------UPB-Standard-Form-main-upb-form----------->
+  <div class="clear"></div>
+</div><!----------------UPB-Standard-Form-entry-content-------->
+   <div class="customupberror" style="display:none"></div>
+    <div id="UPB-Button-area">
+     <div class="UPB-Button-input forgot-passwordd">
+      <input type="hidden" class="UPB-Button" name="current_ID" id="current_ID" value="<?php echo $current_ID; ?>" />
+      <?php wp_nonce_field('upb_edit_profile'); ?>
+      <input type="submit" value="Save" class="UPB-Button" id="EPSubmit" name="EPSubmit">
+       <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
     </div>
     </div>
-  </form>
-</div>
+</form>
 <?php
 		}
 }
@@ -651,14 +634,31 @@ else
 {
 ?>
 <!--Shows options when user tries to access a restricted page without logging in-->
-<div class="main-edit-profile" align="center"> You need to login to view this page. <br />
-  <br />
-  <div align="center" style="width:430px;">
-    <div class="UltimatePB-Button"> <a href="<?php echo site_url(); ?>"> Go back to Home-Page </a> </div>
-    &nbsp;
-    <div class="UltimatePB-Button"> <a href="<?php echo $pageURL; ?><?php echo $sign; ?>login2=1" title="Login"> Go back to Login </a> </div>
+<div id="UPB-Standard-Form">
+    <div id="UPB-Standard-Form-entry-content">
+     <div class="UPB-Standard-Form-main-upb-form">
+       <div class="already-logged">
+     <div class="You-are-already-logged-in"> 
+     <h3>You need to login to view this page.</h3>
+     </div>
+     <div class="UPB-Button-input">
+  <a class="UPB-Button" href="<?php echo site_url(); ?>"> Go back to Home-Page </a>
+  <a class="UPB-Button" href="<?php echo $pageURL; ?><?php echo $sign; ?>login2=1" title="Login"> Go back to Login </a>
+  <div class="clear"></div>
+  
+  </div><!----------UPB-Button-input-------->
+  
+  <div class="clear"></div>
   </div>
-</div>
+  
+  <div class="clear"></div>
+  
+   </div><!---------UPB-Standard-Form-main-upb-form--------->
+   
+  <div class="clear"></div>
+  </div><!---------UPB-Standard-Form-entry-content------->
+  
+</div><!-----------UPB-Standard-Form----->
 <?php
 		}
 	}
