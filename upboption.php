@@ -112,11 +112,12 @@ float:left;
             <form method="post">
              <?php wp_nonce_field('save_upb_personalization_setting'); ?>
     		<div class="profile-top-user" style="float: left;margin-bottom: 10px;margin-top: 10px;width: 96%;font-size: 16px;padding-left: 10px;
-line-height: 25px;">Custom Text for Registration Page:</div>
+line-height: 31px;">Custom Text for Registration Page:</div>
               <?php
 			 $qry="SELECT value FROM $upb_option WHERE fieldname='Registration_Custom_Text'";
        		 $data = $wpdb->get_var($qry);
 			 ?>
+             <div class="clear"></div>
               <textarea id="RegCustomText" name="RegCustomText" cols="50" rows="10"><?php echo $data;?></textarea>
               <br>
               <br>

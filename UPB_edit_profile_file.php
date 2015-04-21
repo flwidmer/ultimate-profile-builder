@@ -338,7 +338,7 @@ else {
 <form method="post" action="" id="your-profile" class="UPB-login-form" enctype="multipart/form-data" onsubmit="javascript: return validateyour_profile();">
   <div id="UPB-Standard-Form-entry-content">
    <div class="UPB-Standard-Form-main-upb-form">
-      <div class="login-form">
+      <div class="login-form registration-form">
        
   <?php if (checkfieldname("upb_usernameshowhide","yes")==true): ?>
     <div class="formtable">

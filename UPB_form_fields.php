@@ -86,10 +86,15 @@ $i=1;
 foreach($reg as $row)
 {
 ?>
+<style type="text/css">
+.input-width input{
+	width:25px;
+}
+</style>
 <!--HTML when there are already custom fields associated with selected user role-->
         <div class="rows result">
           <div class="cols" style="min-width:25px;">
-            <form method="post" action="admin.php?page=UltimatePB_Field_edit">
+            <form method="post" class="input-width" action="admin.php?page=UltimatePB_Field_edit">
             <?php wp_nonce_field('upb_delete_field'); ?>
               <input type="hidden" value="<?php echo $row->Id;?>" name="id" />
               <input type="submit" class="button" value="Delete" name="delete_field" id="delete_field" onClick="return confirmdelete()"/>

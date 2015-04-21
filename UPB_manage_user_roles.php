@@ -51,10 +51,15 @@ $i = 1;
 foreach($roles as $key=>$role)
 {
 ?>
+<style type="text/css">
+.input-width input{
+	width:25px;
+}
+</style>
         <div class="rows result">
           <div class="cols" style="min-width:25px;">
           <?php if($key == 'administrator' || $key == 'editor' || $key == 'subscriber' || $key == 'contributor' || $key=='author') :?>
-          <input type="button" class="button" value="Delete" name="delete_role" id="delete_field_disable"/>
+          <input style="width:20px;" type="button" class="button" value="Delete" name="delete_role" id="delete_field_disable"/>
           <?php else: ?>
             <form method="post" action="">
             	<?php wp_nonce_field('upb_remove_user_role'); ?>

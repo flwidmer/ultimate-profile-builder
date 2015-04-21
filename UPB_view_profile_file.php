@@ -88,17 +88,19 @@
   <div id="UPB-Standard-Form-entry-content">
      
      <div class="UPB-Standard-Form-main-upb-form">
-    <div class="profile-img-device-box profile_image_box_area" style="float:left; overflow:hidden; height:200px;">
+    <div class="profile-img-device-box profile_image_box_area">
       <div class="left-box">
         <?php if(isset($avtar_image[0]) && $avtar_image[0]!='') :?>
    
-        <div class="img-box"><img src="<?php echo $avtar_image[0]; ?>" />
+        <div class="img-box">
+        <img src="<?php echo $avtar_image[0]; ?>" />
         <div class="change_profile_image"><a href="<?php echo $pageURL; ?><?php echo $sign; ?>changeavatar=1" title="Change Avatar">
        Change Avatar 
-      </a></div></div>
+      </a></div>
+        </div>
         <?php else :?>
-        <div class="profile-img-device profile_image_box_area" style="float:left; overflow:hidden; height:200px;">
-        <div class="default_profile_pic">
+         <div class="img-box">
+          <div class="default_profile_pic">
             <?php  //Displays default image when user has not uploaded an image profile
 		  $user_info = get_userdata($current_id); 
      	  $username = $user_info->user_login;
@@ -116,13 +118,16 @@
 			}
 		  ?>
           </div>
+          
           <div class="change_profile_image" style="float:left !important;">
           <a href="<?php echo $pageURL; ?><?php echo $sign; ?>changeavatar=1" title="Change Avatar">
-       Change Avatar 
-      </a></div>
-          </div>
+          Change Avatar 
+         </a></div>
+         <div class="clear"></div>
+         </div>
         <?php endif; ?>
-      </div>
+        </div>
+      
       <div class="right-box">
         <?php if (checkfieldname("upb_nicknameshowhide","yes")==true && (get_user_meta($current_id,'nickname', true) !="")) : ?>
         <div class="user-name-info">Nick Name:

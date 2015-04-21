@@ -198,7 +198,7 @@ function validateLogin()
       
       <div class="reg_frontErr" id="divuser_pass" style="display:none;">Please enter a password.</div>
       
-       
+       <div class="clear"></div>
        <div class="formtable forgot-password">
        <label>&nbsp;</label>
        <input type="checkbox" value="true" id="rememberme" name="rememberme">

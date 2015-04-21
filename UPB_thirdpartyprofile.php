@@ -62,9 +62,10 @@ function toggleDivFun2(a)
         <div class="left-box">
           <?php if(isset($avtar_image[0]) && $avtar_image[0]!='') :?>
          
-                               <div class="img-box"> <img src="<?php echo $avtar_image[0]; ?>" /></div>
+          <div class="img-box"> <img src="<?php echo $avtar_image[0]; ?>" /></div>
                          
           <?php else :?>
+          <div class="img-box"> 
           <div class="default_profile_pic">
             <?php  //Displays default image when user has not uploaded an image profile
 		  $user_info = get_userdata($current_id);
@@ -87,6 +88,7 @@ function toggleDivFun2(a)
 		  
 		  
 		  ?>
+          </div>
           </div>
           <?php endif;
 		  $user_info = get_userdata($current_id);
@@ -279,7 +281,9 @@ function toggleDivFun2(a)
 <div class="cler"></div>
     </div>
 	<!--HTML for displaying user posts-->
-    <div class="my-post">
+  <div class="clear"></div>
+  </div>
+  <div class="my-post">
       <?php
 					$user_post_count = count_user_posts( $current_id );//Fetches posts
 					if($user_post_count && checkfieldname("upb_postshowhide","yes")==true)
@@ -306,5 +310,4 @@ function toggleDivFun2(a)
 					
 				?>
     </div>
-  </div>
 </div>

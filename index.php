@@ -3,7 +3,7 @@
 		Plugin Name: Ultimate Profile Builder by CMSHelpLive
 		Plugin URI: http://cmshelplive.com/chl-products/ultimate-profile-builder-pro.html
 		Description: Supercharge your WordPress site's user pages with tons of additional features, customizations and power tools.
-		Version: 3.0
+		Version: 3.1
 		Author: CMSHelpLive Team
 		Author URI: http://cmshelplive.com/
 		License: GPL2

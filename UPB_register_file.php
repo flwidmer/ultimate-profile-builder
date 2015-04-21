@@ -284,7 +284,7 @@ else
     <div class="text-info-heading"><?php echo $Custom_Text;?></div>
     <div id="UPB-Standard-Form-entry-content">
       <div class="UPB-Standard-Form-main-upb-form">
-        <div class="login-form">
+        <div class="login-form registration-form">
            
            <div class="formtable">
             <label for="user_login"><?php _e('Username',$textdomain);?></label>
@@ -366,6 +366,7 @@ $reg1 = $wpdb->get_results($qry1);
         <?php }
 if($row1->Type=='term_checkbox')
 		 {?>
+         <div class="clear"></div>
         <div class="formtable forgot-password">
           <label>&nbsp;</label>
           <div class="term-box <?php if($row1->Require==1)echo 'upb_termboxrequired';?>">
