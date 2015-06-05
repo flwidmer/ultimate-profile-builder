@@ -96,7 +96,7 @@ else
 }
 ?>
 jQuery(document).ready(function() {
-	jQuery("#listusers").load("<?php echo get_option('siteurl').'/wp-admin/admin-ajax.php';?>?action=fetch_pages&cookie=encodeURIComponent(document.cookie)&search=<?php if(isset($_REQUEST['search'])) echo $_REQUEST['search'];?>&pageurl=<?php if(isset($pageURL)) echo $pageURL;?>&role=<?php if(isset($role)) echo $role; ?>", {'page':0}, function() {jQuery("#1-page").addClass('active');});  //initial page number to load
+	jQuery("#listusers").load("<?php echo get_option('siteurl').'/wp-admin/admin-ajax.php';?>?action=fetch_pages&cookie=encodeURIComponent(document.cookie)&search=<?php if(isset($_REQUEST['search'])) echo urlencode($search);?>&pageurl=<?php if(isset($pageURL)) echo $pageURL;?>&role=<?php if(isset($role)) echo $role; ?>", {'page':0}, function() {jQuery("#1-page").addClass('active');});  //initial page number to load
 	
 	jQuery(".paginate_click").click(function(e) {
 		jQuery("#listusers").prepend('<div class="loading-indication"><img src="<?php echo $path;?>/images/ajax-loader.gif" /> Loading...</div>');
@@ -105,7 +105,7 @@ jQuery(document).ready(function() {
 		jQuery('.paginate_click').removeClass('active'); //remove any active class
         //post page number and load returned data into result element
         //notice (page_num-1), subtract 1 to get actual starting point
-		jQuery("#listusers").load("<?php echo get_option('siteurl').'/wp-admin/admin-ajax.php';?>?action=fetch_pages&cookie=encodeURIComponent(document.cookie)&search=<?php if(isset($_REQUEST['search'])) echo $_REQUEST['search'];?>&pageurl=<?php if(isset($pageURL)) echo $pageURL;?>&role=<?php if(isset($role)) echo $role; ?>", {'page':(page_num-1)}, function(){
+		jQuery("#listusers").load("<?php echo get_option('siteurl').'/wp-admin/admin-ajax.php';?>?action=fetch_pages&cookie=encodeURIComponent(document.cookie)&search=<?php if(isset($_REQUEST['search'])) echo urlencode($search);?>&pageurl=<?php if(isset($pageURL)) echo $pageURL;?>&role=<?php if(isset($role)) echo $role; ?>", {'page':(page_num-1)}, function(){
 		});
 		jQuery(this).addClass('active'); //add active class to currently clicked element (style purpose)
 		return false; //prevent going to herf link
