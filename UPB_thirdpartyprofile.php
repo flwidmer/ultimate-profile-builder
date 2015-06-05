@@ -205,7 +205,7 @@ function toggleDivFun2(a)
       </div>
       <?php if (checkfieldname("upb_biographicalinfoshowhide","yes")==true && $user_description!="") : ?>
       <div class="profile-about-me">
-        <h3>About <?php echo $thirdpartyname;?>:</h3>
+        <h3>La professione di <?php echo $thirdpartyname;?>:</h3>
         <div class="toggleDiv" >
           <div class="toggleDiv1" >
             <?php

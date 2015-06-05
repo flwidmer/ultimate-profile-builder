@@ -56,7 +56,8 @@ $users_table=$wpdb->prefix."users";
 /*Returns profiles for list view based on search criteria. If there is no search criteria, then all profiles are showed*/ 
 if(!empty($_REQUEST['search']))
 {
-	$search = ( isset($_REQUEST['search']) ) ? sanitize_text_field($_REQUEST['search']) : false ;			
+	$search = ( isset($_REQUEST['search']) ) ? sanitize_text_field($_REQUEST['search']) : false ;	
+			
 			$args = array(
 			'offset' => $position ,
 			'number' => $item_per_page,
@@ -71,7 +72,17 @@ if(!empty($_REQUEST['search']))
 				'key'     => 'last_name',
 				'value'   => $search,
 				'compare' => 'LIKE'
-				)
+				),
+			array(
+				'key'     => 'nickname',
+				'value'   => $search,
+				'compare' => 'LIKE'
+			),
+			array(
+				'key'     => 'description',
+				'value'   => $search,
+				'compare' => 'LIKE'
+			)
 					)
 						 );
 	$my_users = new WP_User_Query($args);	

@@ -22,24 +22,35 @@ if(isset($_REQUEST['id']))
 	/*Shows search results*/
 if(!empty($_REQUEST['search']))
 {
+	
 $search = ( isset($_REQUEST['search']) ) ? sanitize_text_field($_REQUEST['search']) : false ;
-			$args = array(
-			'offset' => $position ,
-				'number' => $item_per_page,
-	'meta_query' => array(
-		'relation' => 'OR',
-		array(
-			'key'     => 'first_name',
-			'value'   => $search,
-			'compare' => 'LIKE'
-		),
-		array(
-			'key'     => 'last_name',
-			'value'   => $search,
-			'compare' => 'LIKE'
-									)
-								)
-						 );
+	$args = array(
+		'offset' => $position ,
+		'number' => $item_per_page,
+		'meta_query' => array(
+			'relation' => 'OR',
+			array(
+				'key'     => 'first_name',
+				'value'   => $search,
+				'compare' => 'LIKE'
+			),
+			array(
+				'key'     => 'last_name',
+				'value'   => $search,
+				'compare' => 'LIKE'
+			),
+			array(
+				'key'     => 'nickname',
+				'value'   => $search,
+				'compare' => 'LIKE'
+			),
+			array(
+				'key'     => 'description',
+				'value'   => $search,
+				'compare' => 'LIKE'
+			)
+		)
+	 );
 	$my_users = new WP_User_Query($args);
 }
 else
